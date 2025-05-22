@@ -6,7 +6,7 @@ function App() {
     return (
         <div className="w-full h-full bg-ajc-beige-500 text-ajc-text">
             <div className="flex flex-col items-center h-full pt-10 gap-y-5">
-                <img src="/assets/ajclogo.png" alt="logo" className="h-80" />
+                <img src="/assets/ajclogo.png" alt="logo" className="w-9/12" />
 
                 {/* <div className="flex items-center gap-x-10">
                     <span className="text-ajc-text text-xl">ホーム</span>
