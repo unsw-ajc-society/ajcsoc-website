@@ -30,7 +30,7 @@ function AboutUs() {
                     </p>
             
                     <a 
-                    className="block mx-30 bg-ajc-red-500 text-white px-2 py-2 rounded text-center hover:scale-110"
+                    className="block mx-30 bg-ajc-red-500 text-white px-2 py-2 rounded text-center hover:scale-110 shadow hover:shadow-lg"
                     href = "https://docs.google.com/forms/d/e/1FAIpQLSdLpdySwPRQIvRFLDBuG8sDZ8VVBDTKqasKxftTqJh52Gar3g/viewform"
                     target="_blank"
                     rel="noopener noreferrer"

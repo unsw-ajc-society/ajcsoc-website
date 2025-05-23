@@ -20,7 +20,7 @@ function Events() {
     return (
         <section className="bg-ajc-beige-500 w-full py-10 px-4">
             <div className=" mx-auto flex flex-col items-center max-w-screen-xl">
-                <h2 className= "text-4xl font-bold text-ajc-text mb-10 text-center"> Our recent events! </h2>
+                <h2 className= "text-4xl font-bold text-ajc-text mb-10 text-center"> Our Recent Events! </h2>
                 <div className="flex flex-wrap justify-center gap-[6vw] w-full">
                     {events.map((event, index) =>(
                         <a
