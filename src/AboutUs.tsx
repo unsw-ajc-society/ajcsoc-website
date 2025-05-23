@@ -11,7 +11,7 @@ function AboutUs() {
             
                 {/* Image Right half */}
                 {/* md:w-1/2 on bigger screens it takes half the screen */}
-                <div className="md:w-1/2 flex justify-center px-15">
+                <div className="md:w-1/2 flex justify-center px-10 mb-10">
                     <img
                         src="/assets/2025team.png" // source of the picture
                         alt="Picture of Our 2025 Team" // The text that comes up when 
