@@ -1,22 +1,17 @@
 import AboutUs from './AboutUs';
 import './App.css';
 import Icons from './Icon';
+import Events from './Events'
 
 function App() {
     return (
-        <div className="w-full h-full bg-ajc-beige-500 text-ajc-text">
-            <div className="flex flex-col items-center h-full pt-10 gap-y-5">
-                <img src="/assets/ajclogo.png" alt="logo" className="w-9/12" />
-
-                {/* <div className="flex items-center gap-x-10">
-                    <span className="text-ajc-text text-xl">ホーム</span>
-                    <span className="text-ajc-text text-xl">サークルについて</span>
-                    <span className="text-ajc-text text-xl">イベント</span>
-                </div> */}
-
+        <div className="w-screen h-screen bg-ajc-beige-500 text-ajc-text">
+            <div className="flex flex-col items-center h-full pt-2 gap-y-3">
+                <img src="/assets/ajclogo.png" alt="logo" className="w-7/12" />
                 <Icons/>
                 {/* About Us */}
                 <AboutUs/>
+                <Events/>
             </div>
         </div>
     )
