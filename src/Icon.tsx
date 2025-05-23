@@ -37,7 +37,7 @@ function Icons() {
                 >
                 <Icon
                     className={`text-ajc-text cursor-pointer group-hover:scale-110 transition-transform duration-300 ${hoverColour}`}
-                    style={{ width: '6vw', height: 'auto' }}
+                    style={{ width: '7vw', height: 'auto' }}
                 />
                 </a>
             ))}

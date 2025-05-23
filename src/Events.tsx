@@ -18,24 +18,23 @@ const events = [
 
 function Events() {
     return (
-
-        <section className="bg-ajc-beige-500 w-full py-16 px-4">
-            <div className="max-w-6xl mx-auto flex flex-col items-center">
-                <h2 className= "text-3xl font-bold text-ajc-text mb-8 text-center"> Our recent events! </h2>
-                <div className="flex flex-wrap justify center gap-6 w-full">
+        <section className="bg-ajc-beige-500 w-full py-10 px-4">
+            <div className=" mx-auto flex flex-col items-center max-w-screen-xl">
+                <h2 className= "text-4xl font-bold text-ajc-text mb-10 text-center"> Our recent events! </h2>
+                <div className="flex flex-wrap justify-center gap-[6vw] w-full">
                     {events.map((event, index) =>(
                         <a
-                        key={index}
-                        href={event.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full sm:w-[47%] lg:w-[30%] bg-white rounded-xl shadow hover:shadow-lg transition duration-300"
-                    >
-                    <img 
-                        src={event.image}
-                        alt={event.description}
-                        className="w-full h-full object-contain rounded-t-xl"
-                    />
+                            key={index}
+                            href={event.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-2/7 h-auto group bg-white rounded-xl shadow hover:shadow-lg transition duration-300"
+                        >
+                        <img
+                            src={event.image}
+                            alt={event.description}
+                            className=" rounded-xl h-full object-contain shadow hover:shadow-lg transition-transform duration-300 group-hover:scale-110"
+                        />
                     </a>                    
                 ))}
                 </div>

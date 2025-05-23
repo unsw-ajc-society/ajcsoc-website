@@ -5,7 +5,7 @@ function AboutUs() {
                 px-10 py-10">
             
                 {/* Team Image */}
-                <div className="md:w-1/2 flex justify-center px-15">
+                <div className="md:w-1/2 flex justify-center px-10">
                     <img
                         src="/assets/2025team.png"
                         alt="Picture of Our 2025 Team"
