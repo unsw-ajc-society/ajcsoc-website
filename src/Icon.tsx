@@ -26,7 +26,7 @@ const socials = [
 
 function Icons() {
     return (
-        <div className="flex items-center gap-x-10">
+        <div className="flex items-center gap-x-[5vw]">
             {socials.map(({ href, icon: Icon, hoverColour }, index) => (
                 <a
                     key={index}
@@ -36,8 +36,8 @@ function Icons() {
                     className="group"
                 >
                 <Icon
-                    className={`w-16 h-16 text-ajc-text cursor-pointer
-                         group-hover:scale-110 transition-transform duration-300 ${hoverColour}`}
+                    className={`text-ajc-text cursor-pointer group-hover:scale-110 transition-transform duration-300 ${hoverColour}`}
+                    style={{ width: '6vw', height: 'auto' }}
                 />
                 </a>
             ))}
