@@ -9,7 +9,6 @@ function App() {
             <div className="flex flex-col items-center h-full">
                 <img src="/assets/ajclogo.png" alt="logo" style={{ width: '62vw', height: 'auto' }} />
                 <Icons/>
-                {/* About Us */}
                 <AboutUs/>
                 <Events/>
             </div>
