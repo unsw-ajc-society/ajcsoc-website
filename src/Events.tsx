@@ -21,7 +21,7 @@ function Events() {
         <section className="bg-ajc-beige-500 w-full py-8 px-4">
             <div className=" mx-auto flex flex-col items-center w-full">
                 <h2 className= "text-4xl font-bold text-ajc-text mb-10 text-center">
-                    Take A Look At Our Recent Events! 
+                    Click to see our Recent Events! 
                 </h2>
                 <div className="flex flex-wrap justify-center gap-[4vw] w-full">
                     {events.map((event, index) =>(
