@@ -2,6 +2,7 @@ import AboutUs from './AboutUs';
 import './App.css';
 import Icons from './Icon';
 import Events from './Events'
+import T2Welcome from './T2Welcome'
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
                 <img src="/assets/ajclogo.png" alt="logo" style={{ width: '62vw', height: 'auto' }} />
                 <Icons/>
                 <AboutUs/>
+                <T2Welcome/>
                 <Events/>
             </div>
         </div>
