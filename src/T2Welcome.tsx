@@ -2,12 +2,12 @@ const events = [
     {
         description: "T2 O-Week Welcome Event",
         href: "https://www.instagram.com/p/DJ_llKgPPRt/",
-        image: "public/assets/OweekT2.png" //temporary image i reckon
+        image: "./assets/OweekT2.png" //temporary image i reckon
     }, 
     {
         description: "Subcommittee Recruitment",
-        href: "idk",
-        image: "public/assets/subcomrecruitmentT2.png" //temporary image maybe this is different
+        href: "https://www.instagram.com/p/DJ_llKgPPRt/", //change later
+        image: "./assets/subcomrecruitmentT2.png" //temporary image maybe this is different
     },
 
 ]
