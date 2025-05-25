@@ -17,7 +17,7 @@ function T2Welcome() {
         <section className="w-full px-5 py-3 md:py-15 bg-ajc-red-500">
             <div className=" mx-auto flex flex-col items-center max-w-screen-xl">
                 <h2 className= "text-2xl mb-3 md:mb-10 text-white md:text-5xl font-bold text-ajc-text text-center">
-                    Check Our Our O-Week Welcome! 
+                    Check Out Our O-Week Welcome! 
                 </h2>
                 <div className="flex flex-wrap justify-center w-full gap-[10vw] px-0 md:px-10">
                     {events.map((event, index) =>(
