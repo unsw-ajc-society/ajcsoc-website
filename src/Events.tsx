@@ -18,7 +18,7 @@ const events = [
 
 function Events() {
     return (
-        <section className="bg-ajc-beige-500 w-full py-10 px-4">
+        <section className="bg-ajc-beige-500 w-full py-8 px-4">
             <div className=" mx-auto flex flex-col items-center max-w-screen-xl">
                 <h2 className= "text-4xl font-bold text-ajc-text mb-10 text-center">
                     Our Recent Events! 
@@ -30,7 +30,7 @@ function Events() {
                             href={event.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-shrink-0 w-[28%]  group bg-white rounded-xl shadow hover:shadow-lg transition duration-300"
+                            className="flex-shrink-0 w-[28%] group bg-white rounded-xl shadow hover:shadow-lg transition duration-300"
                         >
                         <img
                             src={event.image}
