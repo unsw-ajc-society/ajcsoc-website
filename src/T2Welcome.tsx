@@ -7,9 +7,8 @@ const events = [
     {
         description: "Subcommittee Recruitment",
         href: "https://www.instagram.com/p/DJ_llKgPPRt/", //change later
-        image: "./assets/subcomRecruitmentT2.png" //temporary image maybe this is different
+        image: "./assets/subcomT2.png" //temporary image maybe this is different
     },
-
 ]
 
 function T2Welcome() {
