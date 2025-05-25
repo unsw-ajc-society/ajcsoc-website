@@ -13,6 +13,11 @@ function App() {
                 <AboutUs/>
                 <T2Welcome/>
                 <Events/>
+                <h2 className= "mt-15 ajc-text text-bold text-4xl font-bold text-ajc-text mb-10 text-center">
+                    Connect with us and stay tuned~
+                </h2>
+                <Icons/>
+                <div className= "mt-15"></div>
             </div>
         </div>
     )
