@@ -1,7 +1,7 @@
 const events = [
     {
         description: "T2 O-Week Welcome Event",
-        href: "https://www.instagram.com/p/DJ_llKgPPRt/",
+        href: "https://forms.gle/SVugSNDwHM3kyb1q7",
         image: "./assets/OWeekT2.png" //temporary image i reckon
     }, 
     {
