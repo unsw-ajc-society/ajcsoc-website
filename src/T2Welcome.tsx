@@ -2,12 +2,12 @@ const events = [
     {
         description: "T2 O-Week Welcome Event",
         href: "https://forms.gle/SVugSNDwHM3kyb1q7",
-        image: "./assets/OWeekT2.png" //temporary image i reckon
+        image: "./assets/WelcomeEventT2.png"
     }, 
     {
         description: "Subcommittee Recruitment",
         href: "https://docs.google.com/forms/d/e/1FAIpQLSeB5LERTQHxuPzAlHXrnh-CBMMFnMEeVy03TfdYQ4_lWJRgbA/viewform?usp=dialog", //change later
-        image: "./assets/subbieRecruitT2.png" //temporary image maybe this is different
+        image: "./assets/subbieRecruitT2.png"
     },
 ]
 
@@ -15,8 +15,8 @@ function T2Welcome() {
     return (
         <section className="w-full px-5 py-3 md:py-15 bg-ajc-red-500">
             <div className=" mx-auto flex flex-col items-center max-w-screen-xl">
-                <h2 className= "text-2xl mb-3 md:mb-10 text-white md:text-5xl font-bold text-ajc-text text-center">
-                    Our O-Week Welcome and Subcom Recruitment! 
+                <h2 className= "text-2xl md:text-4xl mb-3 md:mb-10 text-white font-bold text-ajc-text text-center">
+                    Click to register for our Welcome Event and apply for our subcommittee! 
                 </h2>
                 <div className="flex flex-wrap justify-center w-full gap-[10vw] px-0 md:px-10">
                     {events.map((event, index) =>(
