@@ -16,7 +16,7 @@ function AboutUs({ language }: { language: Language }) {
 				{/* Text*/}
 				<div className="md:w-1/2 px-4 md:pl-12 text-center md:text-left max-w-xl">
 					<h2 className="text-3xl font-bold text-ajc-text mb-4">
-						{language === "en" ? "About Us!" : "私たちについて!"}
+						{language === "en" ? "About Us!" : "AJCについて"}
 					</h2>
 					<p className="text-ajc-text text-md leading-relaxed mb-5">
 						{language === "en" ? (
@@ -35,15 +35,21 @@ function AboutUs({ language }: { language: Language }) {
 							</>
 						) : (
 							<>
-								Australia-Japan Career Development Society (AJC)は、
-								学生が素晴らしいキャリアを築く手助けをすることに焦点を当てています。
-								日本で、日系企業で、またはオーストラリア国内でのキャリア構築を支援します。
+								Australia-Japan Career Development Society (AJC) は、
+								学生一人ひとりが望むキャリアを実現できるよう、日々情熱を持って活動しています。
 								<br />
-								私たちのミッションはシンプルです。
-								日本人学生と非日本人学生の両方が就職活動を成功させるためのガイドとなり、
-								様々な企業やリクルーターとの強い繋がりを築くことです。
+								わたしたちの使命はただひとつ。国籍を問わず、すべての学生が就職活動を通じて、
+								さまざまな企業やリクルーターと強い「つながり」を持てるようサポートすることです。
 								<br />
-								最終的には、学生がキャリアの旅路で成功することを目指しています！
+								学生の皆さんがキャリアという旅の中で、それぞれ自分らしい人生を切り拓いてゆくのを見届けることこそ、私たちの最大の喜びです。
+								<br />
+								そのためにAJCでは、就職活動に役立つワークショップやセミナーを多数開催。
+								<br />
+								さらに、オーストラリアと日本の業界で活躍するプロフェッショナルと直接交流できるネットワーキングイベントも企画しています。
+								<br />
+								これらのイベントでは就活に有利なヒントを得られるだけでなく、将来を大きく変える出会いがあり、自分でも気づかなかった可能性を広げるきっかけにもなります。
+								<br />
+								私たちと一緒に、輝く未来への第一歩を踏み出しませんか？
 							</>
 						)}
 					</p>
