@@ -3,6 +3,7 @@ import './App.css';
 import Icons from './Icon';
 import Events from './Events'
 import T2Welcome from './T2Welcome'
+import Spons from './Spons'
 
 function App() {
     return (
@@ -13,7 +14,8 @@ function App() {
                 <AboutUs/>
                 <T2Welcome/>
                 <Events/>
-                <h2 className= "mt-15 ajc-text text-bold text-4xl font-bold text-ajc-text mb-10 text-center">
+                <Spons/>
+                <h2 className= "mt-8 ajc-text text-bold text-4xl font-bold text-ajc-text mb-10 text-center">
                     Connect with us and stay tuned~
                 </h2>
                 <Icons/>
