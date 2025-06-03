@@ -1,9 +1,10 @@
-import AboutUs from "./AboutUs";
 import "./App.css";
-import Icons from "./Icon";
+import { useState } from "react";
+import AboutUs from "./AboutUs";
 import Events from "./Events";
-import T2Welcome from "./T2Welcome";
+import Icons from "./Icon";
 import Spons from "./Spons";
+import T2Welcome from "./T2Welcome";
 
 function App() {
 	return (
