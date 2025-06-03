@@ -5,19 +5,32 @@ import Events from "./Events";
 import Icons from "./Icon";
 import Spons from "./Spons";
 import T2Welcome from "./T2Welcome";
+import type { Language } from "./types";
 
 function App() {
+	const [language, setLanguage] = useState<Language>("en");
 	return (
 		<div className="w-full h-full bg-ajc-beige-500 text-ajc-text">
 			<div className="flex flex-col items-center h-full">
 				<img src="/assets/ajclogo.png" alt="logo" className="w-[62vw] h-auto" />
+				{/* language toggle button */}
+				<div className="flex justify-end w-full p-4">
+					<button
+						onClick={() => setLanguage(language === "en" ? "ja" : "en")}
+						className="text-ajc-text bg-ajc-beige-700 hover:bg-ajc-beige-600 px-4 py-2 rounded"
+					>
+						{language === "en" ? "日本語" : "English"}
+					</button>
+				</div>
 				<Icons />
-				<AboutUs />
-				<T2Welcome />
-				<Events />
-				<Spons />
+				<AboutUs language={language} />
+				<T2Welcome language={language} />
+				<Events language={language} />
+				<Spons language={language} />
 				<h2 className="mt-8 ajc-text text-bold text-4xl font-bold text-ajc-text mb-10 text-center">
-					Connect with us and stay tuned~
+					{language === "en"
+						? "Connect with us and stay tuned~"
+						: "私たちとつながり、最新情報をお見逃しなく~"}
 				</h2>
 				<Icons />
 				<div className="mt-15"></div>

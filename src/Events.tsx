@@ -1,27 +1,50 @@
+import type { Language } from "./types";
+
 const events = [
 	{
-		description: "Community connections",
+		description: {
+			en: "Community connections",
+			ja: "コミュニティのつながり",
+		},
 		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_ajc-welcome-event-following-on-from-o-week-activity-7306203138917605377-teNi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACWvTa8BJp0pxlYGkFGwnSigKsUP3AQs4HM",
 		image: "./assets/welcomeEvent.png",
 	},
 	{
-		description: "Professional Networking",
+		description: {
+			en: "Professional Networking",
+			ja: "プロフェッショナルネットワーキング",
+		},
 		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_2025-international-womens-day-career-networking-activity-7310256419071512577-jp4g?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACWvTa8BJp0pxlYGkFGwnSigKsUP3AQs4HM",
 		image: "./assets/careersEvent.png",
 	},
 	{
-		description: "Workshops",
+		description: {
+			en: "Workshops",
+			ja: "ワークショップ",
+		},
 		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_today-the-unsw-australia-japan-career-development-activity-7313813439414468608-xGh-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACWvTa8BJp0pxlYGkFGwnSigKsUP3AQs4HM",
 		image: "./assets/linkedIn.png",
 	},
-];
+] satisfies {
+	description: {
+		[key in Language]: string;
+	};
+	href: string;
+	image: string;
+}[];
 
-function Events() {
+function Events({
+	language,
+}: {
+	language: Language;
+}) {
 	return (
 		<section className="bg-ajc-beige-500 w-full py-8 px-4">
 			<div className=" mx-auto flex flex-col items-center w-full">
 				<h2 className="text-2xl md:text-4xl font-bold text-ajc-text mb-10 text-center">
-					Click to see our Recent Events!
+					{language === "en"
+						? "Click to see our Recent Events!"
+						: "最近のイベントをチェックしよう！"}
 				</h2>
 				<div className="flex flex-wrap justify-center gap-[4vw] w-full">
 					{events.map((event, index) => (
@@ -34,7 +57,7 @@ function Events() {
 						>
 							<img
 								src={event.image}
-								alt={event.description}
+								alt={event.description[language]}
 								className="w-full h-full rounded-xl object-contain shadow hover:shadow-lg transition-transform duration-300 group-hover:scale-110"
 							/>
 						</a>

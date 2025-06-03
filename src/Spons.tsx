@@ -1,3 +1,5 @@
+import type { Language } from "./types";
+
 const sponsors = [
 	{
 		description: "H & H Lawyers",
@@ -11,12 +13,16 @@ const sponsors = [
 	},
 ];
 
-function Spons() {
+function Spons({
+	language,
+}: {
+	language: Language;
+}) {
 	return (
 		<section className="bg-ajc-beige-500 w-full py-8 px-4">
 			<div className=" mx-auto flex flex-col items-center w-full">
 				<h2 className="text-2xl md:text-4xl font-bold text-ajc-text mb-10 text-center">
-					Our Sponsors
+					{language === "en" ? "Our Sponsors" : "私たちのスポンサー"}
 				</h2>
 				<div className="flex flex-wrap justify-center gap-[15vw] w-full">
 					{sponsors.map((spons, index) => (
