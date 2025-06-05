@@ -4,7 +4,7 @@ const events = [
 	{
 		description: {
 			en: "Community connections",
-			ja: "コミュニティのつながり",
+			ja: "AJCでつながる",
 		},
 		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_ajc-welcome-event-following-on-from-o-week-activity-7306203138917605377-teNi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACWvTa8BJp0pxlYGkFGwnSigKsUP3AQs4HM",
 		image: "./assets/welcomeEvent.png",
@@ -44,7 +44,7 @@ function Events({
 				<h2 className="text-2xl md:text-4xl font-bold text-ajc-text mb-10 text-center">
 					{language === "en"
 						? "Click to see our Recent Events!"
-						: "最近のイベントをチェックしよう！"}
+						: "最近のイベントをチェック"}
 				</h2>
 				<div className="flex flex-wrap justify-center gap-[4vw] w-full">
 					{events.map((event, index) => (

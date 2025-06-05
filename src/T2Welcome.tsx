@@ -36,7 +36,7 @@ function T2Welcome({
 				<h2 className="text-2xl md:text-4xl mb-3 md:mb-10 text-white font-bold text-ajc-text text-center">
 					{language === "en"
 						? "Click to register for our Welcome Event and apply for our Subcommittee!"
-						: "私たちのウェルカムイベントに登録し、サブコミッティーに応募しましょう！"}
+						: "AJCの歓迎イベントに登録し、サブコミッティーに応募！"}
 				</h2>
 				<div className="flex flex-wrap justify-center w-full gap-[10vw] px-0 md:px-10">
 					{events.map((event, index) => (

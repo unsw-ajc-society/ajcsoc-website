@@ -62,7 +62,7 @@ function AboutUs({ language }: { language: Language }) {
 						>
 							{language === "en"
 								? "JOIN OUR COMMUNITY!!"
-								: "私たちのコミュニティに参加しよう!!"}
+								: "AJCのコミュニティに参加！"}
 						</a>
 					</div>
 				</div>

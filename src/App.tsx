@@ -30,7 +30,7 @@ function App() {
 				<h2 className="mt-8 ajc-text text-bold text-4xl font-bold text-ajc-text mb-10 text-center">
 					{language === "en"
 						? "Connect with us and stay tuned~"
-						: "私たちとつながり、最新情報をお見逃しなく~"}
+						: "コミュニティで最新情報をゲット！"}
 				</h2>
 				<Icons />
 				<div className="mt-15"></div>
