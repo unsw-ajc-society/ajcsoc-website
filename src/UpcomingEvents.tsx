@@ -1,0 +1,43 @@
+const upcomingEvents = [
+	{
+		description: "PERSOLKELLY Webinar",
+		href: "https://forms.gle/jCeXMVKL8mLsmhDK6",
+		image: "./assets/persolkellyWebinar.png",
+	},
+	{
+		description: "AJC VIVID",
+		href: "https://docs.google.com/forms/d/e/1FAIpQLSfOvsBHAVU98Dj0jb2fIGSfelyf3Th2_qSIDdOGg2nPGrCiig/viewform",
+		image: "./assets/vivid.png",
+	},
+];
+
+function UpcomingEvents() {
+	return (
+		<section className="bg-ajc-beige-500 w-full py-8 px-4">
+			<div className=" mx-auto flex flex-col items-center w-full">
+				<h2 className="text-2xl md:text-4xl font-bold text-ajc-text mb-10 text-center">
+					Click to see our Upcoming Events!
+				</h2>
+				<div className="flex flex-wrap justify-center gap-[4vw] w-full">
+					{upcomingEvents.map((event, index) => (
+						<a
+							key={index}
+							href={event.href}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex-wrap min-w-[140px] w-[26%] group bg-white rounded-xl shadow hover:shadow-lg transition duration-300"
+						>
+							<img
+								src={event.image}
+								alt={event.description}
+								className="w-full h-full rounded-xl object-contain shadow hover:shadow-lg transition-transform duration-300 group-hover:scale-110"
+							/>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+	);
+}
+
+export default UpcomingEvents;

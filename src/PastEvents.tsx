@@ -1,4 +1,4 @@
-const events = [
+const pastEvents = [
 	{
 		description: "Community connections",
 		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_ajc-welcome-event-following-on-from-o-week-activity-7306203138917605377-teNi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACWvTa8BJp0pxlYGkFGwnSigKsUP3AQs4HM",
@@ -16,7 +16,7 @@ const events = [
 	},
 ];
 
-function Events() {
+function PastEvents() {
 	return (
 		<section className="bg-ajc-beige-500 w-full py-8 px-4">
 			<div className=" mx-auto flex flex-col items-center w-full">
@@ -24,7 +24,7 @@ function Events() {
 					Click to see our Recent Events!
 				</h2>
 				<div className="flex flex-wrap justify-center gap-[4vw] w-full">
-					{events.map((event, index) => (
+					{pastEvents.map((event, index) => (
 						<a
 							key={index}
 							href={event.href}
@@ -45,4 +45,4 @@ function Events() {
 	);
 }
 
-export default Events;
+export default PastEvents;
