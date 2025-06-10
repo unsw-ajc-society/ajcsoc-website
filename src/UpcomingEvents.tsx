@@ -1,13 +1,13 @@
 const upcomingEvents = [
 	{
-		description: "PERSOLKELLY Webinar",
-		href: "https://forms.gle/jCeXMVKL8mLsmhDK6",
-		image: "./assets/persolkellyWebinar.png",
-	},
-	{
 		description: "AJC VIVID",
 		href: "https://docs.google.com/forms/d/e/1FAIpQLSfOvsBHAVU98Dj0jb2fIGSfelyf3Th2_qSIDdOGg2nPGrCiig/viewform",
 		image: "./assets/vivid.png",
+	},
+	{
+		description: "Careers Networking Event",
+		href: "https://www.eventbrite.com.au/e/working-across-worlds-japan-australia-career-pathways-tickets-1404596348489",
+		image: "./assets/careerNetworkingEvent.png",
 	},
 ];
 
