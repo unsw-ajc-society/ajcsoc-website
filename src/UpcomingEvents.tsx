@@ -7,7 +7,7 @@ const upcomingEvents = [
 	{
 		description: "Careers Networking Event",
 		href: "https://www.eventbrite.com.au/e/working-across-worlds-japan-australia-career-pathways-tickets-1404596348489",
-		image: "./assets/careerNetworkingEvent.png",
+		image: "./assets/careersNetworkingEvent.png",
 	},
 ];
 
