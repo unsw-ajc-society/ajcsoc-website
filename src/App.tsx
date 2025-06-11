@@ -1,12 +1,12 @@
 import "./App.css";
-import { useState } from "react";
+//import { useState } from "react"; ← not used
 import AboutUs from "./AboutUs";
 import PastEvents from "./PastEvents";
 import Icons from "./Icon";
 import Spons from "./Spons";
 // import T2Welcome from "./T2Welcome"; <- save for T3
 import UpcomingCareerEvents from "./UpcomingCareerEvents";
-import UpcomingSocialEvents from "./upcomingSocialEvents";
+import UpcomingSocialEvents from "./UpcomingSocialEvents";
 
 function App() {
 	return (
