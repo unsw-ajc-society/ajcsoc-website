@@ -1,11 +1,12 @@
 import "./App.css";
-import { useState } from "react";
+//import { useState } from "react"; ← not used
 import AboutUs from "./AboutUs";
 import PastEvents from "./PastEvents";
 import Icons from "./Icon";
 import Spons from "./Spons";
 // import T2Welcome from "./T2Welcome"; <- save for T3
-import UpcomingEvents from "./UpcomingEvents";
+import UpcomingCareerEvents from "./UpcomingCareerEvents";
+import UpcomingSocialEvents from "./UpcomingSocialEvents";
 
 function App() {
 	return (
@@ -14,8 +15,9 @@ function App() {
 				<img src="/assets/ajclogo.png" alt="logo" className="w-[62vw] h-auto" />
 				<Icons />
 				<AboutUs />
-				<UpcomingEvents />
+				<UpcomingCareerEvents />
 				{/* <T2Welcome /> */}
+				<UpcomingSocialEvents />
 				<PastEvents />
 				<Spons />
 				<h2 className="mt-8 ajc-text text-bold text-4xl font-bold text-ajc-text mb-10 text-center">
