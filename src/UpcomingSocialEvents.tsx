@@ -1,4 +1,4 @@
-const upcomingCareerEvents = [
+const upcomingSocialEvents = [
 	{
 		description: "AJC VIVID",
 		href: "https://docs.google.com/forms/d/e/1FAIpQLSfOvsBHAVU98Dj0jb2fIGSfelyf3Th2_qSIDdOGg2nPGrCiig/viewform",
@@ -6,7 +6,7 @@ const upcomingCareerEvents = [
 	}
 ];
 
-function UpcomingCareerEvents() {
+function UpcomingSocialEvents() {
 	return (
 		<section className="bg-ajc-beige-500 w-full py-8 px-4">
 			<div className=" mx-auto flex flex-col items-center w-full">
@@ -14,7 +14,7 @@ function UpcomingCareerEvents() {
 					Click to see our upcoming social events!
 				</h2>
 				<div className="flex flex-wrap justify-center gap-[4vw] w-full">
-					{upcomingCareerEvents.map((event, index) => (
+					{upcomingSocialEvents.map((event, index) => (
 						<a
 							key={index}
 							href={event.href}
@@ -35,4 +35,4 @@ function UpcomingCareerEvents() {
 	);
 }
 
-export default UpcomingCareerEvents;
+export default UpcomingSocialEvents;
