@@ -20,11 +20,11 @@ function App() {
 				name="description"
 				content="Australia-Japan Career Development Society is focused on helping students
 				build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei)
-				companies, or right here in Australia for our community."
+				companies, or right here in Australia for our community!"
 			/>
 			<meta 
-				property="og:description"
-				content="Build a global career! Join AJC UNSW and connect with opportunities in Japan and Australia."
+				property="og:description" 
+				content="Build a global career! Join AJC soceity UNSW and connect with opportunities in Japan and Australia."
 			/>
 			<meta property="og:title" content="AJC society UNSW" />
   			<meta property="og:image" content="./assets/ajclogo.png" />
