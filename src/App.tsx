@@ -23,7 +23,7 @@ function App() {
 				companies, or right here in Australia for our community!"
 			/>
 			<meta 
-				property="og:description" 
+				property="og:description"  
 				content="Build a global career! Join AJC soceity UNSW and connect with opportunities in Japan and Australia."
 			/>
 			<meta property="og:title" content="AJC society UNSW" />
