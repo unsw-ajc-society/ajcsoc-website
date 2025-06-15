@@ -13,7 +13,7 @@ const pastEvents = [
 		description: "Workshops",
 		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_today-the-unsw-australia-japan-career-development-activity-7313813439414468608-xGh-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACWvTa8BJp0pxlYGkFGwnSigKsUP3AQs4HM",
 		image: "./assets/linkedIn.png",
-	},
+	}
 ];
 
 function PastEvents() {

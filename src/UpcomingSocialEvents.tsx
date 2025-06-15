@@ -1,8 +1,8 @@
 const upcomingSocialEvents = [
 	{
-		description: "AJC VIVID",
-		href: "https://docs.google.com/forms/d/e/1FAIpQLSfOvsBHAVU98Dj0jb2fIGSfelyf3Th2_qSIDdOGg2nPGrCiig/viewform",
-		image: "./assets/vivid.png",
+		description: "AJC BBQ",
+		href: "",
+		image: "./assets/bbqEvent.png",
 	}
 ];
 
