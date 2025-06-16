@@ -7,9 +7,9 @@ import Spons from "../components/Spons";
 // import T2Welcome from "./T2Welcome"; <- save for T3
 import UpcomingCareerEvents from "../components/UpcomingCareerEvents";
 import UpcomingSocialEvents from "../components/UpcomingSocialEvents";
-import "../styles/App.css";
 
-function App() {
+
+function Home() {
 	return (
 		<>
 		<Head>
@@ -64,4 +64,4 @@ function App() {
 	);
 }
 
-export default App;
+export default Home;

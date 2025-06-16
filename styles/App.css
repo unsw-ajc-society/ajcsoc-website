@@ -1,6 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
 	--color-ajc-beige-500: #f5efe7;
 	--color-ajc-red-500: #a73f3e;
 	--color-ajc-text: #231f20;
