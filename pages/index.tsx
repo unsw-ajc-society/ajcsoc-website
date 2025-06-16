@@ -9,7 +9,7 @@ import UpcomingCareerEvents from "../components/UpcomingCareerEvents";
 import UpcomingSocialEvents from "../components/UpcomingSocialEvents";
 
 
-function Home() {
+function App() {
 	return (
 		<>
 		<Head>
@@ -20,7 +20,7 @@ function Home() {
 				build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei)
 				companies, or right here in Australia for our community!"
 			/>
-			<link rel="icon" type="image/png" href="./public/assets/logo.png" />
+			<link rel="icon" type="image/png" href="/assets/logo.png" />
 			<meta property="og:title" content="AJC Society UNSW" />
 			<meta
 				property="og:description"
@@ -64,4 +64,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default App;
