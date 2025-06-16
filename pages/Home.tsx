@@ -20,7 +20,7 @@ function Home() {
 				build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei)
 				companies, or right here in Australia for our community!"
 			/>
-			<link rel="icon" type="image/png" href="./public/assets/ajclogo.png" />
+			<link rel="icon" type="image/png" href="./public/assets/logo.png" />
 			<meta property="og:title" content="AJC Society UNSW" />
 			<meta
 				property="og:description"
