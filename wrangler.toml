@@ -1,5 +1,3 @@
 name = "ajcsoc-website"
 compatibility_date = "2025-06-04"
-
-[assets]
-directory = "./dist/"
+main = ".vercel/output/static/_worker.js"
