@@ -1,4 +1,11 @@
 # ref: https://mise.jdx.dev/configuration.html
+#:schema https://mise.jdx.dev/schema/mise.json
+
 [env]
 # Allow calling executables from node_modules/.bin without `bun run`
 '_'.path = ["node_modules/.bin"]
+
+[hooks]
+postinstall = [
+  "bun install --frozen-lockfile",
+]
