@@ -6,14 +6,15 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
+		"pages:build": "next-on-pages build",
 		"start": "next start",
 		"lint": "eslint .",
 		"format": "biome check --write"
 	},
 	"dependencies": {
 		"next": "^14.0.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
+		"react": "18.3.1",
+		"react-dom": "18.3.1",
 		"react-icons": "5.5.0",
 		"tailwind": "4.0.0",
 		"tailwindcss": "4.1.10",
@@ -22,6 +23,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@cloudflare/next-on-pages": "^1.13.12",
 		"@eslint/js": "9.29.0",
 		"@types/react": "19.1.8",
 		"@types/react-dom": "19.1.6",
