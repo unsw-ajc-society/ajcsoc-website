@@ -1,0 +1,53 @@
+{
+  "timestamp": 1750056659070,
+  "outputDir": ".vercel/output/static/_worker.js",
+  "versions": {
+    "@cloudflare/next-on-pages": "1.13.12"
+  },
+  "buildFiles": {
+    "functions": {
+      "invalid": [],
+      "middleware": [],
+      "edge": [],
+      "prerendered": [],
+      "ignored": []
+    },
+    "staticAssets": [
+      "/.DS_Store",
+      "/404.html",
+      "/500.html",
+      "/_next/static/TMNddsBByqmjO3e1l90v-/_buildManifest.js",
+      "/_next/static/TMNddsBByqmjO3e1l90v-/_ssgManifest.js",
+      "/_next/static/chunks/cb355538-c3218d4eb50e7420.js",
+      "/_next/static/chunks/framework-64ad27b21261a9ce.js",
+      "/_next/static/chunks/main-b72093f7aa2e45f9.js",
+      "/_next/static/chunks/pages/_app-bcca66d5d8e76156.js",
+      "/_next/static/chunks/pages/_error-7a92967bea80186d.js",
+      "/_next/static/chunks/pages/index-724480ba7b38fd9b.js",
+      "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "/_next/static/chunks/webpack-8fa1640cc84ba8fe.js",
+      "/_next/static/css/6006533651ad59d4.css",
+      "/assets/.DS_Store",
+      "/assets/2025team.png",
+      "/assets/OWeekT2.png",
+      "/assets/WelcomeEventT2.png",
+      "/assets/ajclogo.png",
+      "/assets/bbqEvent.png",
+      "/assets/careersEvent.png",
+      "/assets/careersNetworkingEvent.png",
+      "/assets/hnhlogo.png",
+      "/assets/linkedIn.png",
+      "/assets/logo.png",
+      "/assets/persolkellyWebinar.png",
+      "/assets/persolkellylogo.png",
+      "/assets/vivid.png",
+      "/assets/welcomeEvent.png",
+      "/index.html"
+    ],
+    "identifiers": {
+      "wasm": {},
+      "manifest": {},
+      "webpack": {}
+    }
+  }
+}
