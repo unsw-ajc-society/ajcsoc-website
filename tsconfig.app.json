@@ -22,5 +22,5 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true
 	},
-	"include": ["src"]
+	"include": ["src", "pages/index.tsx", "components/AboutUs.tsx", "components/Icon.tsx", "components/PastEvents.tsx", "components/Spons.tsx", "components/UpcomingSocialEvents.tsx", "components/UpcomingCareerEvents.tsx", "components/T2Welcome.tsx"]
 }
