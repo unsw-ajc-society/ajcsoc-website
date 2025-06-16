@@ -1,11 +1,55 @@
 {
+	// ref: https://next.biomejs.dev/reference/configuration/
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"linter": {
-		"enabled": false
+	"assist": {
+		"actions": {
+			"source": {
+				// Enable actions not included in the recommended preset
+				"useSortedAttributes": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on"
+			}
+		}
+	},
+	"css": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": [
+			"**",
+			// Ignore auto-generated files
+			"!cloudflare-env.d.ts"
+		]
 	},
 	"json": {
 		"parser": {
+			// Allow comments in JSON files
 			"allowComments": true
 		}
+	},
+	"linter": {
+		"domains": {
+			"next": "recommended",
+			"project": "recommended",
+			"react": "all"
+		},
+		"rules": {
+			// Enable rules not included in the recommended preset
+			"complexity": {
+				"noForEach": "on",
+				"noUselessStringConcat": "on",
+				"noVoid": "on",
+				"useSimplifiedLogicExpression": "on",
+				"useWhile": "on"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": true,
+		"useIgnoreFile": true
 	}
 }

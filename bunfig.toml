@@ -1,0 +1,4 @@
+# ref: https://bun.sh/docs/runtime/bunfig
+[install]
+# Pin dependencies to specific versions
+exact = true

@@ -1,0 +1,4 @@
+# ref: https://mise.jdx.dev/configuration.html
+[env]
+# Allow calling executables from node_modules/.bin without `bun run`
+'_'.path = ["node_modules/.bin"]
