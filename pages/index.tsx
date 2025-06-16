@@ -13,13 +13,14 @@ function App() {
 	return (
 		<>
 		<Head>
-			<title>AJC Society UNSW</title>
+			<title>AJC UNSW</title>
 			<meta
 				name="description"
 				content="Australia-Japan Career Development Society (AJCsoc UNSW) is focused on helping students
 				build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei)
 				companies, or right here in Australia for our community!"
 			/>
+			<link rel="icon" type="image/png" href="./public/assets/ajclogo.png" />
 			<meta property="og:title" content="AJC Society UNSW" />
 			<meta
 				property="og:description"
