@@ -3,6 +3,8 @@
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 
+initOpenNextCloudflareForDev();
+
 const nextConfig: NextConfig = {
 	experimental: {
 		// Enable since we only have single page
@@ -16,5 +18,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
-initOpenNextCloudflareForDev();
