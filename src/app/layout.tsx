@@ -24,7 +24,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="bg-background text-text font-sans">{children}</body>
+			<body className="h-full w-full bg-background font-sans text-text">
+				{children}
+			</body>
 		</html>
 	);
 }
