@@ -9,3 +9,7 @@
 postinstall = [
   "bun install --frozen-lockfile",
 ]
+
+[settings]
+# Required to use hooks
+experimental = true
