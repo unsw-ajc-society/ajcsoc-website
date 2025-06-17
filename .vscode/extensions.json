@@ -1,4 +1,7 @@
 {
 	// ref: https://code.visualstudio.com/docs/editor/extension-marketplace#_workspace-recommended-extensions
-	"recommendations": ["biomejs.biome", "dbaeumer.vscode-eslint"]
+	"recommendations": [
+		"biomejs.biome",
+		"bradlc.vscode-tailwindcss"
+	]
 }
