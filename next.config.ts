@@ -25,7 +25,6 @@ const nextConfig: NextConfig = {
 	typescript: {
 		tsconfigPath: "./tsconfig.app.json",
 	},
-	swcMinify: process.platform === "darwin" && process.arch === "arm64" ? false : true,
 };
 
 initCloudflare();
