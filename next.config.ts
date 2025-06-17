@@ -7,6 +7,9 @@ initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
 	experimental: {
+		// Enable since we only have single page
+		// ref: https://nextjs.org/docs/app/api-reference/config/next-config-js/inlineCss
+		inlineCss: true,
 		typedRoutes: true,
 	},
 	typescript: {
