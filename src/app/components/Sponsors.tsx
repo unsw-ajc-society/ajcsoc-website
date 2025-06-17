@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import hnhLogo from "../images/sponsors/hnh-logo.png";
-import persolkellyLogo from "../images/sponsors/persolkelly-logo.png";
 import mynaviLogo from "../images/sponsors/mynavi-logo.png";
+import persolkellyLogo from "../images/sponsors/persolkelly-logo.png";
 
 const sponsors = [
 	{
@@ -20,7 +20,7 @@ const sponsors = [
 		href: "https://www.mynavi.jp/eng/",
 		image: mynaviLogo,
 		name: "Mynavi",
-	}
+	},
 ] as const;
 
 export default function Sponsors() {
