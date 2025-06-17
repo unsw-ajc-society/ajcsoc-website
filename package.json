@@ -24,7 +24,7 @@
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
 		"check": "biome check --write --error-on-warnings",
 		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-		"dev": "next dev --turbopack",
+		"dev": "next dev",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"start": "next start",
 		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload"
