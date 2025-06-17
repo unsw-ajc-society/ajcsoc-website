@@ -19,6 +19,7 @@
 	},
 	"name": "ajcsoc-website",
 	"private": true,
+	"packageManager": "bun@1.2.15",
 	"scripts": {
 		"build": "next build",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
