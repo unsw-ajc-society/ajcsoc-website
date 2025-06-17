@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+	--color-ajc-beige: #f5efe7;
+	--color-ajc-red: #a73f3e;
+	--color-ajc-black: #231f20;
+
+	--color-background: var(--color-ajc-beige);
+	--color-text: var(--color-ajc-black);
+	--color-primary: var(--color-ajc-red);
+}

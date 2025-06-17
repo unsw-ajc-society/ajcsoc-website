@@ -1,7 +1,15 @@
 {
+	// ref: https://www.typescriptlang.org/tsconfig/
+	"$schema": "https://json.schemastore.org/tsconfig",
+	// Required to avoid Next.js errors
+	// Fix should be available in v15.4.0
+	// ref: https://github.com/vercel/next.js/issues/75699
+	"compilerOptions": {},
 	"files": [],
+	// Use "solution-style" tsconfig to include multiple tsconfig files
+	// ref: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#support-for-solution-style-tsconfigjson-files
 	"references": [
 		{ "path": "./tsconfig.app.json" },
-		{ "path": "./tsconfig.node.json" }
+		{ "path": "./tsconfig.base.json" }
 	]
 }

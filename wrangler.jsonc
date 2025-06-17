@@ -1,0 +1,28 @@
+{
+	// ref: https://developers.cloudflare.com/workers/wrangler/configuration
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".open-next/assets"
+	},
+	"compatibility_date": "2025-06-04",
+	"compatibility_flags": [
+		"nodejs_compat",
+		// Not strictly required, but recommended
+		// ref: https://github.com/cloudflare/workers-sdk/pull/9147
+		"global_fetch_strictly_public"
+	],
+	"main": ".open-next/worker.js",
+	"name": "ajcsoc-website",
+	"observability": {
+		"enabled": true
+	},
+	"placement": { "mode": "smart" },
+	"route": {
+		"custom_domain": true,
+		"pattern": "ajcsoc.org"
+	},
+	"send_metrics": true,
+	// Disable *.workers.dev routes
+	"workers_dev": false
+}

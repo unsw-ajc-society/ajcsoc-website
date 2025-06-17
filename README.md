@@ -1,12 +1,45 @@
-# React + Vite
+# ajcsoc-website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Development
 
-Currently, two official plugins are available:
+### Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
 
-## Expanding the ESLint configuration
+    ```bash
+    git clone https://github.com/unsw-ajc-society/ajcsoc-website.git
+    cd ajcsoc-website
+    ```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install mise
+
+    Follow the [instructions](https://mise.jdx.dev/getting-started.html).
+    Make sure you activate mise in your shell.
+
+3. Install dependencies:
+
+    ```bash
+    # Trust mise config
+    mist trust
+    # Install Node.js, Bun, and dependencies
+    mise install
+    ```
+
+### Running the Development Server
+
+To start the development server, run:
+
+```bash
+bun run dev
+```
+
+This is also required to generate TypeScript types for the project, so make sure to run it before you start developing.
+Otherwise, you will see TypeScript errors in your editor.
+
+### Linting and Formatting
+
+To lint and format the code, run:
+
+```bash
+bun run check
+```
