@@ -41,7 +41,7 @@ export default function SocialIcons() {
 					target="_blank"
 				>
 					<Icon
-						className={`h-auto w-[6vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
+						className={`h-auto w-[5vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
 					/>
 				</Link>
 			))}

@@ -8,8 +8,15 @@ export const metadata: Metadata = {
 	openGraph: {
 		description:
 			"Build a global career! Join AJC society UNSW and connect with opportunities in Japan and Australia.",
+		images: [
+			{
+			url: '/assets/ajclogo.png',  // Path from public directory
+			width: 1200,
+			height: 630,
+			alt: 'AJC Society UNSW Logo',
+			},
+		],
 		locale: "en_AU",
-		siteName: "AJC Society UNSW",
 		title: "AJC Society UNSW",
 		type: "website",
 		url: "https://ajcsoc.org",
@@ -24,7 +31,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="h-full w-full bg-background font-sans text-text">
+			<body className="h-full w-full bg-background font-sans text-text"
+			        suppressHydrationWarning={true}
+				>
 				{children}
 			</body>
 		</html>

@@ -3,7 +3,17 @@
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 
-initOpenNextCloudflareForDev();
+// initOpenNextCloudflareForDev();
+const initCloudflare = () => {
+	if (process.env.NODE_ENV !== "development") {
+	  try {
+		const { initOpenNextCloudflareForDev } = require("@opennextjs/cloudflare");
+		initOpenNextCloudflareForDev();
+	  } catch (error) {
+		console.warn("Cloudflare initialization failed:", error);
+	  }
+	}
+};
 
 const nextConfig: NextConfig = {
 	experimental: {
@@ -15,6 +25,9 @@ const nextConfig: NextConfig = {
 	typescript: {
 		tsconfigPath: "./tsconfig.app.json",
 	},
+	swcMinify: process.platform === "darwin" && process.arch === "arm64" ? false : true,
 };
+
+initCloudflare();
 
 export default nextConfig;
