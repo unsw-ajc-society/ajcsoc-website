@@ -1,0 +1,33 @@
+{
+	"HomePage": {
+		"AboutUs": {
+			"description": "At the Australia-Japan Career Development Society (AJC), our focus is on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community.<br></br>Our mission is simple: to guide both Japanese and non-Japanese students through the job search process while forging strong connections with a variety of companies and recruiters. Ultimately, our aim is to see students succeed in their career journey!",
+			"joinUs": "JOIN OUR COMMUNITY!!",
+			"title": "About Us"
+		},
+		"PastEvents": {
+			"events": {
+				"community": "Community connections",
+				"networking": "Professional Networking",
+				"workshop": "Workshops"
+			},
+			"title": "Click to see our Recent Events!"
+		},
+		"Sponsors": {
+			"title": "Our Sponsors"
+		},
+		"socialConnectPrompt": "Connect with us and stay tuned~",
+		"UpcomingCareerEvents": {
+			"events": {
+				"careersNetworkingEvent": "Careers Networking Event"
+			},
+			"title": "Click to see our upcoming careers events!"
+		},
+		"UpcomingSocialEvents": {
+			"events": {
+				"bbq": "AJC BBQ"
+			},
+			"title": "Click to see our upcoming social events!"
+		}
+	}
+}
