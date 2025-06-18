@@ -2,6 +2,7 @@ import Image from "next/image";
 import { type Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
+import { Link } from "../../i18n/navigation";
 import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
@@ -21,6 +22,8 @@ export default function HomePage({
 	setRequestLocale(locale);
 	const t = useTranslations("HomePage");
 
+	const switchTargetLocale = locale === "en" ? "ja" : "en";
+
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-items-center pb-15">
 			<Image
@@ -29,6 +32,15 @@ export default function HomePage({
 				priority={true}
 				src={ajcLogo}
 			/>
+			<Link
+				className="mb-4 rounded bg-ajc-red px-4 py-2 text-2xl text-white"
+				href="/"
+				locale={switchTargetLocale}
+			>
+				{t("switchLocale", {
+					locale: switchTargetLocale === "en" ? "英語" : "Japanese",
+				})}
+			</Link>
 			<SocialIcons />
 			<AboutUs />
 			<UpcomingCareerEvents />

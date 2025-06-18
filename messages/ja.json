@@ -17,6 +17,7 @@
 			"title": "AJCのスポンサー"
 		},
 		"socialConnectPrompt": "コミュニティで最新情報をゲット！",
+		"switchLocale": "{locale}で表示",
 		"UpcomingCareerEvents": {
 			"events": {
 				"careersNetworkingEvent": "キャリアネットワーキングイベント"

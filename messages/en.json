@@ -17,6 +17,7 @@
 			"title": "Our Sponsors"
 		},
 		"socialConnectPrompt": "Connect with us and stay tuned~",
+		"switchLocale": "Switch to {locale}",
 		"UpcomingCareerEvents": {
 			"events": {
 				"careersNetworkingEvent": "Careers Networking Event"
