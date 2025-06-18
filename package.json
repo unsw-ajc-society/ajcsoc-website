@@ -18,14 +18,17 @@
 		"typescript": "5.8.3"
 	},
 	"name": "ajcsoc-website",
-	"private": true,
 	"packageManager": "bun@1.2.15",
+	"private": true,
 	"scripts": {
 		"build": "next build",
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
 		"check": "biome check --write --unsafe --error-on-warnings",
 		"deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
 		"dev": "next dev",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"lint:fix": "biome check --apply .",
 		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
 		"start": "next start",
 		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload"

@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 			"Build a global career! Join AJC society UNSW and connect with opportunities in Japan and Australia.",
 		images: [
 			{
-			url: '/src/app/images/large-logo.png',
-			width: 993,
-			height: 373,
-			alt: 'AJC Society UNSW Logo',
+				alt: "AJC Society UNSW Logo",
+				height: 373,
+				url: "/src/app/images/large-logo.png",
+				width: 993,
 			},
 		],
 		locale: "en_AU",
