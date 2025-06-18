@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 		locale: "en_AU",
 		title: "AJC Society UNSW",
 		type: "website",
-		url: "https://ajcsoc.org",
+		url: "/",
 	},
 	title: "AJC Society UNSW | Australia-Japan Career Development",
 };
