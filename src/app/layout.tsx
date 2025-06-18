@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 export const metadata: Metadata = {
 	description:
 		"AJC (Australia-Japan Career Development Society) UNSW is focused on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community!",
-	title: "AJC Society UNSW | Australia-Japan Career Development",
 	metadataBase: new URL("https://ajcsoc.org"),
 	openGraph: {
 		description:
@@ -23,6 +22,7 @@ export const metadata: Metadata = {
 		type: "website",
 		url: "https://ajcsoc.org",
 	},
+	title: "AJC Society UNSW | Australia-Japan Career Development",
 };
 
 export default function RootLayout({

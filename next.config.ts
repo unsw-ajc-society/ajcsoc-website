@@ -1,8 +1,8 @@
 // ref: https://nextjs.org/docs/app/api-reference/config/next-config-js
 
 import process from "node:process";
-import type { NextConfig } from "next";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	experimental: {
