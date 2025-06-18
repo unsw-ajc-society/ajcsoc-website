@@ -1,9 +1,8 @@
 // ref: https://nextjs.org/docs/app/api-reference/config/next-config-js
 
+import process from "node:process";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
-
-initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
 	experimental: {
@@ -16,5 +15,9 @@ const nextConfig: NextConfig = {
 		tsconfigPath: "./tsconfig.app.json",
 	},
 };
+
+if (process.env.NODE_ENV !== "development") {
+	initOpenNextCloudflareForDev();
+}
 
 export default nextConfig;

@@ -12,7 +12,7 @@ export default function Home() {
 		<main className="flex min-h-screen flex-col items-center justify-items-center pb-15">
 			<Image
 				alt="AJC Society logo"
-				className="h-auto w-3/5"
+				className="h-auto w-2/5"
 				priority={true}
 				src={ajcLogo}
 			/>

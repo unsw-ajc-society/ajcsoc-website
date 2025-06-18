@@ -4,17 +4,25 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
 	description:
-		"Australia-Japan Career Development Society is focused on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community!",
+		"AJC (Australia-Japan Career Development Society) UNSW is focused on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community!",
+	metadataBase: new URL("https://ajcsoc.org"),
 	openGraph: {
 		description:
 			"Build a global career! Join AJC society UNSW and connect with opportunities in Japan and Australia.",
+		images: [
+			{
+				alt: "AJC Society UNSW Logo",
+				height: 373,
+				url: "/large-logo.png",
+				width: 993,
+			},
+		],
 		locale: "en_AU",
-		siteName: "AJC Society UNSW",
 		title: "AJC Society UNSW",
 		type: "website",
-		url: "https://ajcsoc.org",
+		url: "/",
 	},
-	title: "AJC Society UNSW",
+	title: "AJC Society UNSW | Australia-Japan Career Development",
 };
 
 export default function RootLayout({
