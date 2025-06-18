@@ -1,11 +1,8 @@
 // ref: https://nextjs.org/docs/app/api-reference/config/next-config-js
 
-// import process from "node:process";
+import process from "node:process";
 import type { NextConfig } from "next";
-//just for lint......line 27 doesn't want empty {} and doesn't want console...
-const logError = (message: string, error: unknown) => {
-    process.stderr.write(`${message}: ${error}\n`);
-};
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const nextConfig: NextConfig = {
 	experimental: {
@@ -20,12 +17,7 @@ const nextConfig: NextConfig = {
 };
 
 if (process.env.NODE_ENV !== "development") {
-	try {
-		const { initOpenNextCloudflareForDev } = require("@opennextjs/cloudflare");
-		initOpenNextCloudflareForDev();
-	} catch (error:unknown) {
-		logError("Failed to initialize Cloudflare:", error);
-	}
+	initOpenNextCloudflareForDev();
 }
 
 export default nextConfig;
