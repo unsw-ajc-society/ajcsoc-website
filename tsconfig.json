@@ -1,51 +1,15 @@
 {
-  // ref: https://www.typescriptlang.org/tsconfig/
-  "$schema": "https://json.schemastore.org/tsconfig",
-  // Required to avoid Next.js errors
-  // Fix should be available in v15.4.0
-  // ref: https://github.com/vercel/next.js/issues/75699
-  "compilerOptions": {
-    "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "files": [],
-  // Use "solution-style" tsconfig to include multiple tsconfig files
-  // ref: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#support-for-solution-style-tsconfigjson-files
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.base.json"
-    }
-  ],
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	// ref: https://www.typescriptlang.org/tsconfig/
+	"$schema": "https://json.schemastore.org/tsconfig",
+	// Required to avoid Next.js errors
+	// Fix should be available in v15.4.0
+	// ref: https://github.com/vercel/next.js/issues/75699
+	"compilerOptions": {},
+	"files": [],
+	// Use "solution-style" tsconfig to include multiple tsconfig files
+	// ref: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#support-for-solution-style-tsconfigjson-files
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.base.json" }
+	]
 }
