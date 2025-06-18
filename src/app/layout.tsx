@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 			"Build a global career! Join AJC society UNSW and connect with opportunities in Japan and Australia.",
 		images: [
 			{
-			url: '/assets/ajclogo.png',  // Path from public directory
-			width: 1200,
-			height: 630,
+			url: '/src/app/images/large-logo.png',
+			width: 993,
+			height: 373,
 			alt: 'AJC Society UNSW Logo',
 			},
 		],
@@ -31,9 +31,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="h-full w-full bg-background font-sans text-text"
-			        suppressHydrationWarning={true}
-				>
+			<body className="h-full w-full bg-background font-sans text-text">
 				{children}
 			</body>
 		</html>
