@@ -30,5 +30,11 @@
 			},
 			"title": "Click to see our upcoming social events!"
 		}
+	},
+	"Metadata": {
+		"description": "AJC ({fullName}) UNSW is focused on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community!",
+		"fullName": "Australia-Japan Career Development Society",
+		"shortDescription": "Build a global career! Join {shortName} and connect with opportunities in Japan and Australia.",
+		"shortName": "AJC Society UNSW"
 	}
 }

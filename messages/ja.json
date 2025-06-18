@@ -30,5 +30,11 @@
 			},
 			"title": "今後のイベント"
 		}
+	},
+	"Metadata": {
+		"description": "AJC ({fullName}) UNSWは、学生が日本、日系企業、またはオーストラリアで素晴らしいキャリアを築けるようサポートすることを目指しています。",
+		"fullName": "オーストラリア・日本キャリアサークル",
+		"shortDescription": "{shortName}に参加して、日本とオーストラリアでキャリアを築く機会をつかみましょう",
+		"shortName": "AJC Society UNSW"
 	}
 }

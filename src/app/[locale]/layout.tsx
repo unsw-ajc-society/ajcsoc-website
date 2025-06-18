@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { notFound } from "next/navigation";
 import { hasLocale, type Locale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import { routing } from "../../i18n/routing";
 
@@ -12,32 +12,31 @@ export async function generateMetadata({
 	params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
 	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "Metadata" });
 	const countryCodeMap = {
 		en: "AU",
 		ja: "JP",
 	} as const;
 
 	return {
-		description:
-			"AJC (Australia-Japan Career Development Society) UNSW is focused on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community!",
+		description: t("description"),
 		metadataBase: new URL("https://ajcsoc.org"),
 		openGraph: {
-			description:
-				"Build a global career! Join AJC society UNSW and connect with opportunities in Japan and Australia.",
+			description: t("shortDescription"),
 			images: [
 				{
-					alt: "AJC Society UNSW Logo",
+					alt: `${t("shortName")} Logo`,
 					height: 373,
 					url: "/large-logo.png",
 					width: 993,
 				},
 			],
 			locale: `${locale}_${countryCodeMap[locale]}`,
-			title: "AJC Society UNSW",
+			title: t("shortName"),
 			type: "website",
 			url: "/",
 		},
-		title: "AJC Society UNSW | Australia-Japan Career Development",
+		title: `${t("shortName")} | ${t("fullName")}`,
 	};
 }
 
