@@ -19,10 +19,10 @@ export async function generateMetadata({
 	} as const;
 
 	return {
-		description: t("description"),
+		description: t("description", { fullName: t("fullName") }),
 		metadataBase: new URL("https://ajcsoc.org"),
 		openGraph: {
-			description: t("shortDescription"),
+			description: t("shortDescription", { shortName: t("shortName") }),
 			images: [
 				{
 					alt: `${t("shortName")} Logo`,
