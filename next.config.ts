@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
  
 if (process.env.NODE_ENV !== "development") {
 	try {
-	  const { initOpenNextCloudflareForDev } = await import("@opennextjs/cloudflare");
+	  const { initOpenNextCloudflareForDev } = require ("@opennextjs/cloudflare");
 	  initOpenNextCloudflareForDev();
 	} catch (error) {
 	  console.warn("Cloudflare initialization failed:", error);
