@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-
+import { useTranslations } from "next-intl";
+import { Link } from "../../../i18n/navigation";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
 import mynaviLogo from "../images/sponsors/mynavi-logo.png";
 import persolkellyLogo from "../images/sponsors/persolkelly-logo.png";
@@ -24,11 +24,13 @@ const sponsors = [
 ] as const;
 
 export default function Sponsors() {
+	const t = useTranslations("HomePage.Sponsors");
+
 	return (
 		<section className="w-full px-4 py-8">
 			<div className=" mx-auto flex w-full flex-col items-center">
 				<h2 className="mb-10 text-center font-bold text-2xl md:text-4xl">
-					Our Sponsors
+					{t("title")}
 				</h2>
 				<div className="flex w-full flex-wrap justify-center gap-[15vw]">
 					{sponsors.map(({ name, href, image }) => (

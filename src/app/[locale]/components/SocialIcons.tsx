@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "../../../i18n/navigation";
 
 const socials = [
 	{
@@ -10,7 +10,6 @@ const socials = [
 	},
 	{
 		hoverColour: "group-hover:fill-blue-500",
-		// biome-ignore lint/nursery/noSecrets: This is a public link
 		href: "https://www.facebook.com/people/UNSW-Australia-Japan-Career-Development-Society-AJC/100095045665332/",
 		icon: FaFacebook,
 		key: "facebook",

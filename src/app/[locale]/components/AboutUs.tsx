@@ -1,8 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "../../../i18n/navigation";
 import teamPicture from "../images/team-2025.png";
 
 export default function AboutUs() {
+	const t = useTranslations("HomePage.AboutUs");
+
 	return (
 		<section>
 			<div className="flex flex-col items-center px-6 py-10 md:flex-row md:px-10">
@@ -15,18 +18,11 @@ export default function AboutUs() {
 				</div>
 
 				<div className="max-w-xl px-4 text-center md:w-1/2 md:pl-12 md:text-left">
-					<h2 className="mb-4 font-bold text-3xl capitalize">About us!</h2>
+					<h2 className="mb-4 font-bold text-3xl capitalize">{t("title")}</h2>
 					<p className="mb-5 text-md leading-relaxed">
-						At the Australia-Japan Career Development Society (AJC), our focus
-						is on helping students build amazing careers, whether that's in
-						Japan, with Japanese-affiliated (Nikkei) companies, or right here in
-						Australia for our community.
-						<br />
-						Our mission is simple: to guide both Japanese and non-Japanese
-						students through the job search process while forging strong
-						connections with a variety of companies and recruiters. <br />
-						Ultimately, our aim is to see students succeed in their career
-						journey!
+						{t.rich("description", {
+							br: () => <br />,
+						})}
 					</p>
 					<div className="mt-4 flex">
 						<Link
@@ -35,7 +31,7 @@ export default function AboutUs() {
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							Join our community!!
+							{t("joinUs")}
 						</Link>
 					</div>
 				</div>
