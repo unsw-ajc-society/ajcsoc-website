@@ -9,6 +9,7 @@
 
 	"files.associations": {
 		".dev.vars": "properties",
+		".env.example": "properties",
 		".tool-versions": "plaintext"
 	},
 
