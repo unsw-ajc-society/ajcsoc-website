@@ -18,6 +18,8 @@ export default function SubscribeModal() {
 		onClose();
 	}
 
+	// TODO: Handle error state, maybe show a toast notification
+
 	return (
 		<dialog className="modal" onClose={onClose} open={true}>
 			<div className="modal-box bg-ajc-beige">

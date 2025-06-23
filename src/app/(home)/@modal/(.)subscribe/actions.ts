@@ -1,6 +1,13 @@
 "use server";
 
+import { auth, sheets_v4 } from "@googleapis/sheets";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { z } from "zod/v4";
+
+// Max attempts to retry appending data to Google Sheets
+const MAX_ATTEMPTS = 3;
+
+const { env } = getCloudflareContext();
 
 const formDataSchema = z.object({
 	email: z.email(),
@@ -34,9 +41,61 @@ export async function subscribeNewsletter(
 
 	const { email: validatedEmail, name: validatedName } = data;
 
-	// TODO: save the email and name to a database
-	// wait for 5 seconds to simulate a network request
-	await new Promise((resolve) => setTimeout(resolve, 5000));
+	let sheetsClient: sheets_v4.Sheets | undefined;
+	try {
+		// ref: https://developers.google.com/identity/protocols/oauth2/scopes#sheets
+		sheetsClient = new sheets_v4.Sheets({
+			auth: await auth.getClient({
+				credentials: {
+					// biome-ignore lint/style/useNamingConvention: library's naming convention
+					client_email: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+					// biome-ignore lint/style/useNamingConvention: library's naming convention
+					private_key: env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(
+						/\\n/g,
+						"\n",
+					),
+				},
+				scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+			}),
+		});
+	} catch {
+		return {
+			message: "Failed to initialize Google Sheets API client.",
+			success: false,
+		};
+	}
+
+	if (!sheetsClient) {
+		return {
+			message: "Failed to initialize Google Sheets API client.",
+			success: false,
+		};
+	}
+
+	const appendData = () =>
+		sheetsClient.spreadsheets.values.append({
+			range: env.NEWSLETTER_SUBSCRIPTION_SHEET_RANGE,
+			requestBody: {
+				values: [[validatedEmail, validatedName, new Date().toISOString()]],
+			},
+			spreadsheetId: env.NEWSLETTER_SUBSCRIPTION_SHEET_ID,
+			valueInputOption: "RAW",
+		});
+
+	for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
+		try {
+			// biome-ignore lint/nursery/noAwaitInLoop: we need to wait for the result
+			await appendData();
+			break;
+		} catch {
+			if (attempt === MAX_ATTEMPTS - 1) {
+				return {
+					message: "Failed to append data to Google Sheets.",
+					success: false,
+				};
+			}
+		}
+	}
 
 	return {
 		data: { email: validatedEmail, name: validatedName },
