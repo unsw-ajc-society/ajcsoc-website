@@ -60,7 +60,7 @@ export async function subscribeNewsletter(
 		});
 	} catch (error) {
 		// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
-		console.error("Failed to initialize Google Sheets API client:", error);
+		console.log("Failed to initialize Google Sheets API client:", error);
 		return {
 			message: "Failed to initialize Google Sheets API client.",
 			success: false,
@@ -69,7 +69,7 @@ export async function subscribeNewsletter(
 
 	if (!sheetsClient) {
 		// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
-		console.error("Google Sheets API client is not initialized.");
+		console.log("Google Sheets API client is not initialized.");
 		return {
 			message: "Failed to initialize Google Sheets API client.",
 			success: false,
@@ -93,7 +93,7 @@ export async function subscribeNewsletter(
 			break;
 		} catch (error) {
 			// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
-			console.error(
+			console.log(
 				`Attempt ${attempt + 1} to append data to Google Sheets failed:`,
 				error,
 			);
