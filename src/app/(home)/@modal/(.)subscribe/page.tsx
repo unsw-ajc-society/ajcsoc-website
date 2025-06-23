@@ -1,10 +1,9 @@
-"use client";
+import SubscribeModal from "./SubscribeModal";
 
-import { useRouter } from "next/navigation";
-import SubscribeModal from "../../components/SubscribeModal";
+// Intercepting route must be a dynamic route with OpenNext
+// I guess this is because we cannot intercept to static routes as they are published as ASSETS
+export const dynamic = "force-dynamic";
 
 export default function SubscribeModalPage() {
-	const router = useRouter();
-
-	return <SubscribeModal onClose={() => router.back()} />;
+	return <SubscribeModal />;
 }

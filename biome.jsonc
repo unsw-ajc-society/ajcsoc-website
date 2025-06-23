@@ -114,7 +114,7 @@
 				"useComponentExportOnlyModules": {
 					"level": "on",
 					"options": {
-						"allowExportNames": ["metadata"]
+						"allowExportNames": ["metadata", "dynamic"]
 					}
 				},
 				"useConsistentArrayType": "on",

@@ -1,10 +1,13 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { FaX } from "react-icons/fa6";
 
-export default function SubscribeModal({
-	onClose,
-}: Readonly<{
-	onClose: () => void;
-}>) {
+export default function SubscribeModal() {
+	const router = useRouter();
+	const onClose = () => {
+		router.back();
+	};
 	return (
 		<dialog className="modal" onClose={onClose} open={true}>
 			<div className="modal-box bg-ajc-beige">
