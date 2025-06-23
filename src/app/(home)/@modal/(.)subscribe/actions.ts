@@ -31,10 +31,10 @@ export async function subscribeNewsletter(
 	const email = formData.get("email");
 	const name = formData.get("name");
 
-	const { data, error } = formDataSchema.safeParse({ email, name });
-	if (error) {
+	const { data, error: zodError } = formDataSchema.safeParse({ email, name });
+	if (zodError) {
 		return {
-			message: error.message,
+			message: zodError.message,
 			success: false,
 		};
 	}
@@ -58,7 +58,9 @@ export async function subscribeNewsletter(
 				scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 			}),
 		});
-	} catch {
+	} catch (error) {
+		// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
+		console.error("Failed to initialize Google Sheets API client:", error);
 		return {
 			message: "Failed to initialize Google Sheets API client.",
 			success: false,
@@ -66,6 +68,8 @@ export async function subscribeNewsletter(
 	}
 
 	if (!sheetsClient) {
+		// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
+		console.error("Google Sheets API client is not initialized.");
 		return {
 			message: "Failed to initialize Google Sheets API client.",
 			success: false,
@@ -87,10 +91,15 @@ export async function subscribeNewsletter(
 			// biome-ignore lint/nursery/noAwaitInLoop: we need to wait for the result
 			await appendData();
 			break;
-		} catch {
+		} catch (error) {
+			// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
+			console.error(
+				`Attempt ${attempt + 1} to append data to Google Sheets failed:`,
+				error,
+			);
 			if (attempt === MAX_ATTEMPTS - 1) {
 				return {
-					message: "Failed to append data to Google Sheets.",
+					message: "Failed to write data to DB.",
 					success: false,
 				};
 			}
