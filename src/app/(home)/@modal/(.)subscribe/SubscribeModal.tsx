@@ -1,13 +1,23 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useActionState } from "react";
 import { FaX } from "react-icons/fa6";
+import { subscribeNewsletter } from "./actions";
 
 export default function SubscribeModal() {
 	const router = useRouter();
 	const onClose = () => {
 		router.back();
 	};
+
+	const [state, action, isPending] = useActionState(subscribeNewsletter, null);
+
+	if (state?.success) {
+		// If the subscription was successful, close the modal
+		onClose();
+	}
+
 	return (
 		<dialog className="modal" onClose={onClose} open={true}>
 			<div className="modal-box bg-ajc-beige">
@@ -24,11 +34,14 @@ export default function SubscribeModal() {
 						<FaX />
 					</button>
 				</form>
-				<form
-					action="https://example.com/subscribe"
-					className="flex flex-col space-y-4"
-					method="POST"
-				>
+				<form action={action} className="flex flex-col space-y-4">
+					<input
+						className="input input-bordered w-full"
+						name="name"
+						placeholder="Enter your name"
+						required={true}
+						type="text"
+					/>
 					<input
 						className="input input-bordered w-full"
 						name="email"
@@ -36,8 +49,12 @@ export default function SubscribeModal() {
 						required={true}
 						type="email"
 					/>
-					<button className="btn btn-primary" type="submit">
-						Subscribe
+					<button
+						className="btn btn-primary"
+						disabled={isPending}
+						type="submit"
+					>
+						{isPending ? "Subscribing..." : "Subscribe"}
 					</button>
 				</form>
 			</div>
