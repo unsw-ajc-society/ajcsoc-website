@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+	FaDiscord,
+	FaFacebook,
+	FaInstagram,
+	FaLinkedin,
+	FaNewspaper,
+} from "react-icons/fa";
 
 const socials = [
 	{
@@ -27,6 +33,12 @@ const socials = [
 		icon: FaDiscord,
 		key: "discord",
 	},
+	{
+		hoverColour: "group-hover:fill-gray-400",
+		href: "/subscribe",
+		icon: FaNewspaper,
+		key: "newsletter",
+	},
 ] as const;
 
 export default function SocialIcons() {
@@ -37,8 +49,9 @@ export default function SocialIcons() {
 					className="group"
 					href={href}
 					key={key}
-					rel="noopener noreferrer"
-					target="_blank"
+					{...(href.startsWith("http")
+						? { rel: "noopener noreferrer", target: "_blank" }
+						: {})}
 				>
 					<Icon
 						className={`h-auto w-[5vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
