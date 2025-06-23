@@ -5,7 +5,7 @@ import bbqEvent from "../images/events/bbq-event.png";
 const events = [
 	{
 		description: "AJC BBQ",
-		href: undefined,
+		href: "https://www.instagram.com/ajcsocunsw/p/DLKHkOSxsib/",
 		image: bbqEvent,
 	},
 ] as const;
