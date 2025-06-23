@@ -48,10 +48,12 @@ const envSchema = z.object({
 });
 
 // Validate environment variables before building the app
-const { error } = envSchema.safeParse(process.env);
-if (error) {
-	// biome-ignore lint/suspicious/noConsole: logs in next.config.ts are shown in the build output
-	console.error("Environment variable validation failed:", error);
+if (process.env.NODE_ENV === "development") {
+	const { success, error } = envSchema.safeParse(process.env);
+	if (!success) {
+		// biome-ignore lint/suspicious/noConsole: logs in next.config.ts are shown in the build output
+		console.error("Environment variable validation failed:", error);
+	}
 }
 
 const nextConfig: NextConfig = {
