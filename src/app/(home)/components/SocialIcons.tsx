@@ -52,6 +52,14 @@ export default function SocialIcons() {
 					{...(href.startsWith("http")
 						? { rel: "noopener noreferrer", target: "_blank" }
 						: {})}
+					{
+						// prefetch of dynamic routes is disabled by default
+						...(key === "newsletter"
+							? {
+									prefetch: true,
+								}
+							: {})
+					}
 				>
 					<Icon
 						className={`h-auto w-[5vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
