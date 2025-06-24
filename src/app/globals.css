@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+	/* biome-ignore lint/correctness/noUnknownProperty: DaisyUI */
+	themes: false;
+}
 
 @theme {
 	--color-ajc-beige: #f5efe7;

@@ -1,6 +1,5 @@
 // ref: https://nextjs.org/docs/app/api-reference/config/next-config-js
 
-import process from "node:process";
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 
@@ -16,8 +15,6 @@ const nextConfig: NextConfig = {
 	},
 };
 
-if (process.env.NODE_ENV !== "development") {
-	initOpenNextCloudflareForDev();
-}
+initOpenNextCloudflareForDev();
 
 export default nextConfig;
