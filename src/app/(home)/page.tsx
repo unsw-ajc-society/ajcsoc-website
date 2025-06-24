@@ -19,13 +19,13 @@ export default function Home() {
 			/>
 			<SocialIcons />
 			{/* prefetch of dynamic routes is disabled by default */}
-			<Link
+			{/* <Link
 				className="mx-auto inline-block min-w-[250px] whitespace-nowrap rounded bg-primary px-2 py-2 text-center text-white uppercase shadow hover:scale-110 hover:shadow-lg"
 				href="/subscribe"
 				prefetch={true}
 			>
 				Subscribe to our Newsletter
-			</Link>
+			</Link> */}
 			<AboutUs />
 			<UpcomingCareerEvents />
 			<UpcomingSocialEvents />
