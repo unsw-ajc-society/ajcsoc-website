@@ -4,8 +4,8 @@ import Link from "next/link";
 // import pastCareersEvent from "../images/events/past-careers-event.png";
 // import welcomeEvent from "../images/events/welcome-event.png";
 import ajcVivid from "../images/events/ajc-vivid.png";
-import welcomeEventT2 from "../images/events/welcome-event-t2.png";
 import persolkellyWebinar from "../images/events/persolkelly-webinar.png";
+import welcomeEventT2 from "../images/events/welcome-event-t2.png";
 
 const pastEvents = [
 	{
