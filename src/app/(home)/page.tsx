@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";

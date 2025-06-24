@@ -33,30 +33,30 @@ export default function SocialIcons() {
 	return (
 		<section>
 			<div className="flex items-center gap-x-[5vw]">
-			{socials.map(({ href, icon: Icon, hoverColour, key }) => (
+				{socials.map(({ href, icon: Icon, hoverColour, key }) => (
+					<Link
+						className="group"
+						href={href}
+						key={key}
+						{...(href.startsWith("http")
+							? { rel: "noopener noreferrer", target: "_blank" }
+							: {})}
+					>
+						<Icon
+							className={`h-auto w-[5vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
+						/>
+					</Link>
+				))}
+			</div>
+			<div className="justify-centre mt-5 flex md:mt-8">
 				<Link
-					className="group"
-					href={href}
-					key={key}
-					{...(href.startsWith("http")
-						? { rel: "noopener noreferrer", target: "_blank" }
-						: {})}
+					className="mx-auto inline-block min-w-[280px] whitespace-nowrap rounded bg-primary px-2 py-2 text-center text-white uppercase shadow hover:scale-105 hover:shadow-lg"
+					href="/subscribe"
+					prefetch={true}
 				>
-					<Icon
-						className={`h-auto w-[5vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
-					/>
+					Subscribe to our Newsletter
 				</Link>
-			))}
-		</div>
-		<div className="flex justify-centre mt-5 md:mt-8">
-			<Link
-				className="mx-auto inline-block min-w-[280px] whitespace-nowrap rounded bg-primary px-2 py-2 text-center text-white uppercase shadow hover:scale-105 hover:shadow-lg"
-				href="/subscribe"
-				prefetch={true}
-			>
-				Subscribe to our Newsletter
-			</Link>
-		</div>
+			</div>
 		</section>
 	);
 }
