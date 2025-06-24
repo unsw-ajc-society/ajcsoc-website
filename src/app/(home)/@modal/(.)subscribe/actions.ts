@@ -1,7 +1,11 @@
+// biome-ignore-all lint/suspicious/noConsole: logging is acceptable in server actions
+
 "use server";
 
-import { auth, sheets_v4 } from "@googleapis/sheets";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import GoogleAuth, {
+	type GoogleKey,
+} from "cloudflare-workers-and-google-oauth";
 import { z } from "zod/v4";
 
 // Max attempts to retry appending data to Google Sheets
@@ -33,6 +37,11 @@ export async function subscribeNewsletter(
 
 	const { data, error: zodError } = formDataSchema.safeParse({ email, name });
 	if (zodError) {
+		console.log({
+			zodError: zodError.message,
+			zodErrorMessage:
+				"Invalid form data submitted for newsletter subscription.",
+		});
 		return {
 			message: zodError.message,
 			success: false,
@@ -41,49 +50,52 @@ export async function subscribeNewsletter(
 
 	const { email: validatedEmail, name: validatedName } = data;
 
-	let sheetsClient: sheets_v4.Sheets | undefined;
+	// ref: https://developers.google.com/identity/protocols/oauth2/scopes#sheets
+	const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
+	const googleAuth = JSON.parse(
+		env.GOOGLE_SERVICE_ACCOUNT_KEY || "{}",
+	) as GoogleKey;
+
+	let token: string | undefined;
 	try {
-		// ref: https://developers.google.com/identity/protocols/oauth2/scopes#sheets
-		sheetsClient = new sheets_v4.Sheets({
-			auth: await auth.getClient({
-				credentials: {
-					// biome-ignore lint/style/useNamingConvention: library's naming convention
-					client_email: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-					// biome-ignore lint/style/useNamingConvention: library's naming convention
-					private_key: env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY.replace(
-						/\\n/g,
-						"\n",
-					),
-				},
-				scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-			}),
-		});
+		const oauth = new GoogleAuth(googleAuth, scopes);
+		token = await oauth.getGoogleAuthToken();
+		if (!token) {
+			throw new Error("Google Auth token is undefined.");
+		}
 	} catch (error) {
-		// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
-		console.log("Failed to initialize Google Sheets API client:", error);
+		console.log({
+			oauthTokenError: error,
+			oauthTokenErrorMessage: "Failed to get Google Auth token.",
+		});
 		return {
-			message: "Failed to initialize Google Sheets API client.",
+			message: "Cannot subscribe to newsletter due to a internal server error.",
 			success: false,
 		};
 	}
 
-	if (!sheetsClient) {
-		// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
-		console.log("Google Sheets API client is not initialized.");
-		return {
-			message: "Failed to initialize Google Sheets API client.",
-			success: false,
-		};
-	}
-
+	// ref: https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append
+	const apiUrl = new URL(
+		`https://sheets.googleapis.com/v4/spreadsheets/${
+			env.NEWSLETTER_SUBSCRIPTION_SHEET_ID
+		}/values/${env.NEWSLETTER_SUBSCRIPTION_SHEET_RANGE}:append`,
+	);
+	apiUrl.searchParams.append("valueInputOption", "RAW");
+	apiUrl.searchParams.append("insertDataOption", "INSERT_ROWS");
 	const appendData = () =>
-		sheetsClient.spreadsheets.values.append({
-			range: env.NEWSLETTER_SUBSCRIPTION_SHEET_RANGE,
-			requestBody: {
+		fetch(apiUrl.toString(), {
+			body: JSON.stringify({
+				range: env.NEWSLETTER_SUBSCRIPTION_SHEET_RANGE,
 				values: [[validatedEmail, validatedName, new Date().toISOString()]],
+			}),
+			headers: {
+				// biome-ignore lint/style/useNamingConvention: HTTP header
+				Accept: "application/json",
+				// biome-ignore lint/style/useNamingConvention: HTTP header
+				Authorization: `Bearer ${token}`,
+				"Content-Type": "application/json",
 			},
-			spreadsheetId: env.NEWSLETTER_SUBSCRIPTION_SHEET_ID,
-			valueInputOption: "RAW",
+			method: "POST",
 		});
 
 	for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
@@ -92,14 +104,14 @@ export async function subscribeNewsletter(
 			await appendData();
 			break;
 		} catch (error) {
-			// biome-ignore lint/suspicious/noConsole: logging is acceptable in server actions
-			console.log(
-				`Attempt ${attempt + 1} to append data to Google Sheets failed:`,
-				error,
-			);
+			console.log({
+				appendDataError: error,
+				appendDataErrorMessage: `Failed to append data to Google Sheets on attempt ${attempt + 1}.`,
+			});
 			if (attempt === MAX_ATTEMPTS - 1) {
 				return {
-					message: "Failed to write data to DB.",
+					message:
+						"Cannot subscribe to newsletter due to a internal server error.",
 					success: false,
 				};
 			}
