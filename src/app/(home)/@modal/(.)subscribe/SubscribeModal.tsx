@@ -15,7 +15,7 @@ export default function SubscribeModal() {
 
 	return (
 		<dialog className="modal" onClose={onClose} open={true}>
-			<div className="modal-box bg-ajc-beige">
+			<div className="modal-box bg-ajc-beige rounded-lg p-6">
 				<form method="dialog">
 					<button
 						className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
@@ -27,8 +27,8 @@ export default function SubscribeModal() {
 				</form>
 				{state?.success ? (
 					<div className="flex flex-col items-center justify-center py-8">
-						<h2 className="mb-4 font-bold text-2xl">Thanks for subscribing!</h2>
-						<p className="mb-6">
+						<h2 className="mb-6 font-bold text-2xl">Thanks for subscribing!</h2>
+						<p className="mb-6 text-center">
 							Stay tuned for updates from AJC Society UNSW.
 						</p>
 					</div>
