@@ -13,15 +13,6 @@ export default function SubscribeModal() {
 
 	const [state, action, isPending] = useActionState(subscribeNewsletter, null);
 
-	// TODO: Handle error state, maybe show a toast notification
-	if (state?.success) {
-		// If the subscription was successful, show sucess, close the modal
-		<div className="flex flex-col items-center justify-center py-8"> 
-			<h2 className="font-bold text-2xl mb-4">Thanks for subscribing!</h2> 
-			<p className="mb-6">Stay tuned for updates from AJC Society UNSW.</p>
-		</div>
-		onClose();
-	}
 	return (
 		<dialog className="modal" onClose={onClose} open={true}>
 			<div className="modal-box bg-ajc-beige">
