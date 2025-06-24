@@ -1,24 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import linkedInEvent from "../images/events/linked-in-event.png";
-import pastCareersEvent from "../images/events/past-careers-event.png";
-import welcomeEvent from "../images/events/welcome-event.png";
+// import linkedInEvent from "../images/events/linked-in-event.png";
+// import pastCareersEvent from "../images/events/past-careers-event.png";
+// import welcomeEvent from "../images/events/welcome-event.png";
+import ajcVivid from "../images/events/ajc-vivid.png";
+import welcomeEventT2 from "../images/events/welcome-event-t2.png";
+import persolkellyWebinar from "../images/events/persolkelly-webinar.png";
 
 const pastEvents = [
 	{
-		description: "Community connections",
-		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_ajc-welcome-event-following-on-from-o-week-activity-7306203138917605377-teNi",
-		image: welcomeEvent,
+		description: "PERSOLKELLY Webinar",
+		href: "https://www.instagram.com/p/DKg8lRbvDKs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+		image: persolkellyWebinar,
 	},
 	{
-		description: "Professional Networking",
-		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_2025-international-womens-day-career-networking-activity-7310256419071512577-jp4g",
-		image: pastCareersEvent,
+		description: "Welcome Event Term 2",
+		href: "https://www.instagram.com/p/DKRz-9Xvpq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+		image: welcomeEventT2,
 	},
 	{
-		description: "Workshops",
-		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_today-the-unsw-australia-japan-career-development-activity-7313813439414468608-xGh-",
-		image: linkedInEvent,
+		description: "AJC Vivid",
+		href: "https://www.instagram.com/p/DKi8xWERn3a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+		image: ajcVivid,
 	},
 ] as const;
 
