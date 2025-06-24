@@ -15,7 +15,7 @@ export default function SubscribeModal() {
 
 	return (
 		<dialog className="modal" onClose={onClose} open={true}>
-			<div className="modal-box bg-ajc-beige rounded-lg p-6">
+			<div className="modal-box rounded-lg bg-ajc-beige p-6">
 				<form method="dialog">
 					<button
 						className="btn btn-sm btn-circle btn-ghost absolute top-2 right-2"
