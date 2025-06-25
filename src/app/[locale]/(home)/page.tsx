@@ -2,7 +2,6 @@ import Image from "next/image";
 import { type Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { Link } from "../../../i18n/navigation";
 import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
@@ -22,7 +21,7 @@ export default function HomePage({
 	setRequestLocale(locale);
 	const t = useTranslations("HomePage");
 
-	const switchTargetLocale = locale === "en" ? "ja" : "en";
+	const _switchTargetLocale = locale === "en" ? "ja" : "en";
 
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-items-center pb-15">
