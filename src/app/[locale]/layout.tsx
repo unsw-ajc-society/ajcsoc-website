@@ -62,7 +62,7 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body className="h-full w-full bg-background font-sans text-text">
-				<NextIntlClientProvider messages={null}>
+				<NextIntlClientProvider>
 					{children}
 				</NextIntlClientProvider>
 			</body>
