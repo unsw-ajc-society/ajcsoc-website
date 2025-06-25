@@ -32,7 +32,7 @@ export default function HomePage({
 				priority={true}
 				src={ajcLogo}
 			/>
-			<Link
+			{/* <Link
 				className="mb-4 rounded bg-ajc-red px-4 py-2 text-2xl text-white"
 				href="/"
 				locale={switchTargetLocale}
@@ -40,7 +40,7 @@ export default function HomePage({
 				{t("switchLocale", {
 					locale: switchTargetLocale === "en" ? "英語" : "Japanese",
 				})}
-			</Link>
+			</Link> */}
 			<SocialIcons />
 			<AboutUs />
 			<UpcomingCareerEvents />
