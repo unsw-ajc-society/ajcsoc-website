@@ -21,7 +21,7 @@ export default function HomePage({
 	setRequestLocale(locale);
 	const t = useTranslations("HomePage");
 
-	const _switchTargetLocale = locale === "en" ? "ja" : "en";
+	// const switchTargetLocale = locale === "en" ? "ja" : "en";
 
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-items-center pb-15">
