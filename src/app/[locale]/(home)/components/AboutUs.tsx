@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "../../../i18n/navigation";
+import { Link } from "../../../../i18n/navigation";
 import teamPicture from "../images/team-2025.png";
 
 export default function AboutUs() {

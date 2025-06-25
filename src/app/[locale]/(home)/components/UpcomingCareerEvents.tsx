@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "../../../i18n/navigation";
+import { Link } from "../../../../i18n/navigation";
 import careersNetworkingEvent from "../images/events/careers-networking-event.png";
 
 const events = [

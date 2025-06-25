@@ -119,7 +119,7 @@
 							"metadata",
 							"generateMetadata",
 							"generateStaticParams"
-						]
+						, "dynamic"]
 					}
 				},
 				"useConsistentArrayType": "on",

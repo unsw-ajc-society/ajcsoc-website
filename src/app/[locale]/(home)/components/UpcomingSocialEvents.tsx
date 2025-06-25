@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "../../../i18n/navigation";
+import { Link } from "../../../../i18n/navigation";
 import bbqEvent from "../images/events/bbq-event.png";
 
 const events = [
 	{
-		href: undefined,
+		href: "https://www.instagram.com/ajcsocunsw/p/DLKHkOSxsib/",
 		image: bbqEvent,
 		translationKey: "bbq",
 	},

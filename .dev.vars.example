@@ -1,0 +1,9 @@
+# Google service account private key JSON file (not a path, but the content of the file)
+GOOGLE_SERVICE_ACCOUNT_KEY=
+# ID of the Google Sheet to save newsletter subscriptions
+NEWSLETTER_SUBSCRIPTION_SHEET_ID=
+# Range of the Google Sheet to save newsletter subscriptions
+# 3 columns are expected: Email, Name, Timestamp
+# Range must not include rows, e.g. "Sheet1!A1:C100"
+# e.g. "Sheet1!A:C"
+NEWSLETTER_SUBSCRIPTION_SHEET_RANGE=

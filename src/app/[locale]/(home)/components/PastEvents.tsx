@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "../../../i18n/navigation";
+import { Link } from "../../../../i18n/navigation";
 import linkedInEvent from "../images/events/linked-in-event.png";
 import pastCareersEvent from "../images/events/past-careers-event.png";
 import welcomeEvent from "../images/events/welcome-event.png";

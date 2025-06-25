@@ -2,7 +2,7 @@ import Image from "next/image";
 import { type Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import { Link } from "../../i18n/navigation";
+import { Link } from "../../../i18n/navigation";
 import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
