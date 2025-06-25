@@ -33,7 +33,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Run autofix
-        run: bun run check
+        run: biome check --write
         continue-on-error: true
 
       - name: autofix.ci
