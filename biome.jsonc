@@ -118,8 +118,9 @@
 						"allowExportNames": [
 							"metadata",
 							"generateMetadata",
-							"generateStaticParams"
-						, "dynamic"]
+							"generateStaticParams",
+							"dynamic"
+						]
 					}
 				},
 				"useConsistentArrayType": "on",
