@@ -13,8 +13,23 @@
 			},
 			"title": "Click to see our Recent Events!"
 		},
+		"Social": {
+			"subscribe": "Subscribe to our Newsletter"
+		},
 		"Sponsors": {
 			"title": "Our Sponsors"
+		},
+		"SubscribeModal": {
+			"buttonText": "Subscribe",
+			"buttonTextPending": "Subscribing...",
+			"completed": {
+				"message": "Stay tuned for updates from AJC Society UNSW.",
+				"title": "Thanks for subscribing!"
+			},
+			"description": "Stay updated with the latest news and events from AJC Society UNSW.",
+			"emailPlaceholder": "Enter your email",
+			"namePlaceholder": "Enter your name",
+			"title": "Subscribe to our Newsletter"
 		},
 		"socialConnectPrompt": "Connect with us and stay tuned~",
 		"switchLocale": "Switch to {locale}",

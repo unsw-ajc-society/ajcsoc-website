@@ -13,8 +13,23 @@
 			},
 			"title": "最近のイベントをチェック"
 		},
+		"Social": {
+			"subscribe": "ニュースレターに登録"
+		},
 		"Sponsors": {
 			"title": "AJCのスポンサー"
+		},
+		"SubscribeModal": {
+			"buttonText": "ニュースレターに登録",
+			"buttonTextPending": "登録中...",
+			"completed": {
+				"message": "AJC Society UNSWからの最新情報をお楽しみに",
+				"title": "ご登録ありがとうございます！"
+			},
+			"description": "AJC Society UNSWのニュースやイベント情報をお届けします",
+			"emailPlaceholder": "メールアドレスを入力してください",
+			"namePlaceholder": "お名前を入力してください",
+			"title": "ニュースレターに登録"
 		},
 		"socialConnectPrompt": "コミュニティで最新情報をゲット！",
 		"switchLocale": "{locale}で表示",

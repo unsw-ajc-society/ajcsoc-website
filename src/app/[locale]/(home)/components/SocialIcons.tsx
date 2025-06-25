@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "../../../../i18n/navigation";
 
@@ -29,6 +30,8 @@ const socials = [
 ] as const;
 
 export default function SocialIcons() {
+	const t = useTranslations("HomePage.Social");
+
 	return (
 		<section>
 			<div className="flex items-center gap-x-[5vw]">
@@ -53,7 +56,7 @@ export default function SocialIcons() {
 					href="/subscribe"
 					prefetch={true}
 				>
-					Subscribe to our Newsletter
+					{t("subscribe")}
 				</Link>
 			</div>
 		</section>
