@@ -1,0 +1,55 @@
+{
+	"HomePage": {
+		"AboutUs": {
+			"description": "Australia-Japan Career Development Society (AJC) は、学生一人ひとりが望むキャリアを実現できるよう、日々情熱を持って活動しています。<br></br>わたしたちの使命はただひとつ。国籍を問わず、すべての学生が就職活動を通じて、さまざまな企業やリクルーターと強い「つながり」を持てるようサポートすることです。<br></br>学生の皆さんがキャリアという旅の中で、それぞれ自分らしい人生を切り拓いてゆくのを見届けることこそ、私たちの最大の喜びです。<br></br>そのためにAJCでは、就職活動に役立つワークショップやセミナーを多数開催。<br></br>さらに、オーストラリアと日本の業界で活躍するプロフェッショナルと直接交流できるネットワーキングイベントも企画しています。<br></br>これらのイベントでは就活に有利なヒントを得られるだけでなく、将来を大きく変える出会いがあり、自分でも気づかなかった可能性を広げるきっかけにもなります。<br></br>私たちと一緒に、輝く未来への第一歩を踏み出しませんか？",
+			"joinUs": "AJCのコミュニティに参加！",
+			"title": "AJCについて"
+		},
+		"PastEvents": {
+			"events": {
+				"community": "AJCでつながる",
+				"networking": "プロフェッショナルネットワーキング",
+				"workshop": "ワークショップ"
+			},
+			"title": "最近のイベントをチェック"
+		},
+		"Social": {
+			"subscribe": "ニュースレターに登録"
+		},
+		"Sponsors": {
+			"title": "AJCのスポンサー"
+		},
+		"SubscribeModal": {
+			"buttonText": "ニュースレターに登録",
+			"buttonTextPending": "登録中...",
+			"completed": {
+				"message": "AJC Society UNSWからの最新情報をお楽しみに",
+				"title": "ご登録ありがとうございます！"
+			},
+			"description": "AJC Society UNSWのニュースやイベント情報をお届けします",
+			"emailPlaceholder": "メールアドレスを入力してください",
+			"namePlaceholder": "お名前を入力してください",
+			"title": "ニュースレターに登録"
+		},
+		"socialConnectPrompt": "コミュニティで最新情報をゲット！",
+		"switchLocale": "{locale}で表示",
+		"UpcomingCareerEvents": {
+			"events": {
+				"careersNetworkingEvent": "キャリアネットワーキングイベント"
+			},
+			"title": "今後のキャリアイベント"
+		},
+		"UpcomingSocialEvents": {
+			"events": {
+				"bbq": "AJC BBQ"
+			},
+			"title": "今後のイベント"
+		}
+	},
+	"Metadata": {
+		"description": "AJC ({fullName}) UNSWは、学生が日本、日系企業、またはオーストラリアで素晴らしいキャリアを築けるようサポートすることを目指しています。",
+		"fullName": "オーストラリア・日本キャリアサークル",
+		"shortDescription": "{shortName}に参加して、日本とオーストラリアでキャリアを築く機会をつかみましょう",
+		"shortName": "AJC Society UNSW"
+	}
+}

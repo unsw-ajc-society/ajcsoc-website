@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "../../../../i18n/navigation";
 
 const socials = [
 	{
@@ -10,7 +11,6 @@ const socials = [
 	},
 	{
 		hoverColour: "group-hover:fill-blue-500",
-		// biome-ignore lint/nursery/noSecrets: This is a public link
 		href: "https://www.facebook.com/people/UNSW-Australia-Japan-Career-Development-Society-AJC/100095045665332/",
 		icon: FaFacebook,
 		key: "facebook",
@@ -30,6 +30,8 @@ const socials = [
 ] as const;
 
 export default function SocialIcons() {
+	const t = useTranslations("HomePage.Social");
+
 	return (
 		<section>
 			<div className="flex items-center gap-x-[5vw]">
@@ -54,7 +56,7 @@ export default function SocialIcons() {
 					href="/subscribe"
 					prefetch={true}
 				>
-					Subscribe to our Newsletter
+					{t("subscribe")}
 				</Link>
 			</div>
 		</section>

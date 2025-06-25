@@ -1,11 +1,14 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useActionState } from "react";
 import { FaX } from "react-icons/fa6";
 import { subscribeNewsletter } from "./actions";
 
 export default function SubscribeModal() {
+	const t = useTranslations("HomePage.SubscribeModal");
+
 	const router = useRouter();
 	const onClose = () => {
 		router.back();
@@ -27,30 +30,25 @@ export default function SubscribeModal() {
 				</form>
 				{state?.success ? (
 					<div className="flex flex-col items-center justify-center py-8">
-						<h2 className="mb-6 font-bold text-2xl">Thanks for subscribing!</h2>
-						<p className="mb-6 text-center">
-							Stay tuned for updates from AJC Society UNSW.
-						</p>
+						<h2 className="mb-6 font-bold text-2xl">{t("completed.title")}</h2>
+						<p className="mb-6 text-center">{t("completed.message")}</p>
 					</div>
 				) : (
 					<>
-						<h2 className="font-bold text-2xl">Subscribe to our Newsletter</h2>
-						<p className="py-4">
-							Stay updated with the latest news and events from AJC Society
-							UNSW.
-						</p>
+						<h2 className="font-bold text-2xl">{t("title")}</h2>
+						<p className="py-4">{t("description")}</p>
 						<form action={action} className="flex flex-col space-y-4">
 							<input
 								className="input input-bordered w-full"
 								name="name"
-								placeholder="Enter your name"
+								placeholder={t("namePlaceholder")}
 								required={true}
 								type="text"
 							/>
 							<input
 								className="input input-bordered w-full"
 								name="email"
-								placeholder="Enter your email"
+								placeholder={t("emailPlaceholder")}
 								required={true}
 								type="email"
 							/>
@@ -59,16 +57,14 @@ export default function SubscribeModal() {
 								disabled={isPending}
 								type="submit"
 							>
-								{isPending ? "Subscribing..." : "Subscribe"}
+								{isPending ? t("buttonTextPending") : t("buttonText")}
 							</button>
 						</form>
 					</>
 				)}
 			</div>
 			<form className="modal-backdrop" method="dialog">
-				<button onClick={onClose} type="button">
-					close
-				</button>
+				<button onClick={onClose} type="button" />
 			</form>
 		</dialog>
 	);
