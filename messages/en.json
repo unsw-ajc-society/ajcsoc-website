@@ -7,9 +7,9 @@
 		},
 		"PastEvents": {
 			"events": {
-				"community": "Community connections",
-				"networking": "Professional Networking",
-				"workshop": "Workshops"
+				"ajcVivid": "AJC Vivid",
+				"persolkellyWebinar": "PERSOLKELLY Webinar",
+				"welcomeEventT2": "Welcome Event Term 2"
 			},
 			"title": "Click to see our Recent Events!"
 		},

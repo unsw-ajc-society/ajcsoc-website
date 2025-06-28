@@ -7,9 +7,9 @@
 		},
 		"PastEvents": {
 			"events": {
-				"community": "AJCでつながる",
-				"networking": "プロフェッショナルネットワーキング",
-				"workshop": "ワークショップ"
+				"ajcVivid": "AJC Vivid",
+				"persolkellyWebinar": "PERSOLKELLY ウェビナー",
+				"welcomeEventT2": "ウェルカムイベント Term 2"
 			},
 			"title": "最近のイベントをチェック"
 		},
