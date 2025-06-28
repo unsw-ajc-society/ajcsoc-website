@@ -1,0 +1,55 @@
+{
+	"HomePage": {
+		"AboutUs": {
+			"description": "At the Australia-Japan Career Development Society (AJC), our focus is on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community.<br></br>Our mission is simple: to guide both Japanese and non-Japanese students through the job search process while forging strong connections with a variety of companies and recruiters. Ultimately, our aim is to see students succeed in their career journey!",
+			"joinUs": "JOIN OUR COMMUNITY!!",
+			"title": "About Us"
+		},
+		"PastEvents": {
+			"events": {
+				"ajcVivid": "AJC Vivid",
+				"persolkellyWebinar": "PERSOLKELLY Webinar",
+				"welcomeEventT2": "Welcome Event Term 2"
+			},
+			"title": "Click to see our Recent Events!"
+		},
+		"Social": {
+			"subscribe": "Subscribe to our Newsletter"
+		},
+		"Sponsors": {
+			"title": "Our Sponsors"
+		},
+		"SubscribeModal": {
+			"buttonText": "Subscribe",
+			"buttonTextPending": "Subscribing...",
+			"completed": {
+				"message": "Stay tuned for updates from AJC Society UNSW.",
+				"title": "Thanks for subscribing!"
+			},
+			"description": "Stay updated with the latest news and events from AJC Society UNSW.",
+			"emailPlaceholder": "Enter your email",
+			"namePlaceholder": "Enter your name",
+			"title": "Subscribe to our Newsletter"
+		},
+		"socialConnectPrompt": "Connect with us and stay tuned~",
+		"switchLocale": "Switch to {locale}",
+		"UpcomingCareerEvents": {
+			"events": {
+				"careersNetworkingEvent": "Careers Networking Event"
+			},
+			"title": "Click to see our upcoming careers events!"
+		},
+		"UpcomingSocialEvents": {
+			"events": {
+				"bbq": "AJC BBQ"
+			},
+			"title": "Click to see our upcoming social events!"
+		}
+	},
+	"Metadata": {
+		"description": "AJC ({fullName}) UNSW is focused on helping students build amazing careers, whether that's in Japan, with Japanese-affiliated (Nikkei) companies, or right here in Australia for our community!",
+		"fullName": "Australia-Japan Career Development Society",
+		"shortDescription": "Build a global career! Join {shortName} and connect with opportunities in Japan and Australia.",
+		"shortName": "AJC Society UNSW"
+	}
+}
