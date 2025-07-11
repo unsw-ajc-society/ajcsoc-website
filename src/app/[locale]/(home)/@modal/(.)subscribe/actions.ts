@@ -6,7 +6,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 import GoogleAuth, {
 	type GoogleKey,
 } from "cloudflare-workers-and-google-oauth";
-import { z } from "zod/v4";
+import { z } from "zod";
 
 // Max attempts to retry appending data to Google Sheets
 const MAX_ATTEMPTS = 3;
