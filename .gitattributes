@@ -1,5 +1,4 @@
 * text=auto eol=lf
-bun.lock linguist-generated=true
 .cloudflare-env.d.ts linguist-generated=true
 tsconfig*.json linguist-language=JSON-with-Comments
 .vscode/*.json linguist-language=JSON-with-Comments

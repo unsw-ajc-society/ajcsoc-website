@@ -20,7 +20,6 @@
 
 	"files.readonlyInclude": {
 		// Disallow editing of auto-generated files
-		"**/bun.lock": true,
 		"**/cloudflare-env.d.ts": true
 	},
 
