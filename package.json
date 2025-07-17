@@ -23,7 +23,6 @@
 		"typescript": "5.8.3"
 	},
 	"name": "ajcsoc-website",
-	"packageManager": "bun@1.2.15",
 	"private": true,
 	"scripts": {
 		"build": "next build",

@@ -30,7 +30,7 @@
 To start the development server, run:
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 > [\!IMPORTANT]
@@ -39,7 +39,7 @@ bun run dev
 To start the preview server, which is useful for testing the production build locally, run:
 
 ```bash
-bun run preview
+npm run preview
 ```
 
 ### Environment Variables
@@ -70,5 +70,5 @@ Since `wrangler versions upload` does not support `--keep-vars` ([issue](https:/
 To lint and format the code, run:
 
 ```bash
-bun run check
+npm run check
 ```
