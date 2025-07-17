@@ -36,6 +36,5 @@ jobs:
       - name: autofix.ci
         uses: autofix-ci/action@635ffb0c9798bd160680f18fd73371e355b85f27 # v1.3.2
         with:
-          # Set to false to avoid notifications of canceled workflows
+          # Set to false to avoid notifications of cancelled workflows
           fail-fast: false
-
