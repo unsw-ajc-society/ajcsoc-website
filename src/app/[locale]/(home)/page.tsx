@@ -7,7 +7,7 @@ import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
 import Sponsors from "./components/Sponsors";
 import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
-import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
+// import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
 import ajcLogo from "./images/large-logo.png";
 
 export default function HomePage({
