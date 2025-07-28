@@ -1,12 +1,24 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
-import careersNetworkingEvent from "../images/events/careers-networking-event.png";
+import HAndHEvent from "../images/events/H&H_Event.png";
+import KPMGEvent from "../images/events/KPMG_Event.jpg";
+import MyNaviEvent from "../images/events/MyNavi_Event.jpg";
 
 const events = [
 	{
-		href: "https://www.eventbrite.com.au/e/working-across-worlds-japan-australia-career-pathways-tickets-1404596348489",
-		image: careersNetworkingEvent,
+		href: "https://docs.google.com/forms/d/e/1FAIpQLSfC_Zc8xWA-dJJYbjJJUL5sr-LtRgrAgrmsCc6A2UAVw-obng/viewform",
+		image: HAndHEvent,
+		translationKey: "careersNetworkingEvent",
+	},
+	{
+		href: "https://regu-20105603.hs-sites.com/kpmg-aus25",
+		image: KPMGEvent,
+		translationKey: "careersNetworkingEvent",
+	},
+	{
+		href: "https://global.mynavi.jp/conts/event/aus_mcs2025jul/?utm_source=studentpartnar&utm_medium=textl&utm_campaign=2507",
+		image: MyNaviEvent,
 		translationKey: "careersNetworkingEvent",
 	},
 ] as const;
@@ -23,7 +35,7 @@ export default function UpcomingCareerEvents() {
 				<div className="mb-[2%] flex w-full flex-wrap justify-center gap-[4vw]">
 					{events.map(({ translationKey, href, image }) => (
 						<Link
-							className="group mx-[10%] w-full min-w-[140px] flex-wrap rounded-xl bg-white shadow transition duration-300 hover:shadow-lg"
+							className="group w-[26%] min-w-[140px] flex-wrap rounded-xl bg-white shadow transition duration-300 hover:shadow-lg"
 							href={href}
 							key={translationKey}
 							rel="noopener noreferrer"

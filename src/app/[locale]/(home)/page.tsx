@@ -43,7 +43,7 @@ export default function HomePage({
 			<SocialIcons />
 			<AboutUs />
 			<UpcomingCareerEvents />
-			<UpcomingSocialEvents />
+			{/* <UpcomingSocialEvents /> */}
 			<PastEvents />
 			<Sponsors />
 			<h2 className="mt-8 mb-10 text-center font-bold text-4xl">
