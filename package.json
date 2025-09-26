@@ -14,7 +14,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.4",
-		"@risu729/tsconfigs": "1.0.1",
+		"@risu729/tsconfigs": "2.0.0",
 		"@tailwindcss/postcss": "4.1.13",
 		"@types/node": "24.1.0",
 		"@types/react": "19.1.13",
