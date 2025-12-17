@@ -3,7 +3,7 @@
 	"dependencies": {
 		"@opennextjs/cloudflare": "1.14.6",
 		"cloudflare-workers-and-google-oauth": "2.0.0",
-		"daisyui": "5.5.13",
+		"daisyui": "5.5.14",
 		"esbuild": "0.27.1",
 		"next": "15.4.10",
 		"next-intl": "4.4.0",
