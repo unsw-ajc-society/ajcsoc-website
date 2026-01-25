@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/package.json",
 	"dependencies": {
-		"@opennextjs/cloudflare": "1.15.0",
+		"@opennextjs/cloudflare": "1.15.1",
 		"cloudflare-workers-and-google-oauth": "2.0.0",
 		"daisyui": "5.5.14",
 		"esbuild": "0.27.2",
