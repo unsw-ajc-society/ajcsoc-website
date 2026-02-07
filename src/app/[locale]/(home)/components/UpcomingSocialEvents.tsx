@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
-import bbqEvent from "../images/events/bbq-event.png";
+import OWeek from "../images/events/O-Week_26.jpg";
 
 const events = [
 	{
-		href: "https://www.instagram.com/ajcsocunsw/p/DLKHkOSxsib/",
-		image: bbqEvent,
-		translationKey: "bbq",
+		href: "https://www.instagram.com/p/DUP7vKrkTrF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+		image: OWeek,
+		translationKey: "oweek",
 	},
 ] as const;
 
