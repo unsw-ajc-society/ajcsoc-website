@@ -6,8 +6,8 @@ import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
 import Sponsors from "./components/Sponsors";
-import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
-// import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
+// import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
+import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
 import ajcLogo from "./images/large-logo.png";
 
 export default function HomePage({
@@ -42,8 +42,8 @@ export default function HomePage({
 			</Link> */}
 			<SocialIcons />
 			<AboutUs />
-			<UpcomingCareerEvents />
-			{/* <UpcomingSocialEvents /> */}
+			{/* <UpcomingCareerEvents /> */}
+			<UpcomingSocialEvents />
 			<PastEvents />
 			<Sponsors />
 			<h2 className="mt-8 mb-10 text-center font-bold text-4xl">

@@ -1,25 +1,25 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
-import linkedInEvent from "../images/events/linked-in-event.png";
-import pastCareersEvent from "../images/events/past-careers-event.png";
-import welcomeEvent from "../images/events/welcome-event.png";
+import HAndHEvent from "../images/events/H&H_Event.png";
+import KPMGEvent from "../images/events/KPMG_Event.jpg";
+import MyNaviEvent from "../images/events/MyNavi_Event.jpg";
 
 const pastEvents = [
 	{
-		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_ajc-welcome-event-following-on-from-o-week-activity-7306203138917605377-teNi",
-		image: welcomeEvent,
-		translationKey: "community",
-	},
-	{
-		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_2025-international-womens-day-career-networking-activity-7310256419071512577-jp4g",
-		image: pastCareersEvent,
+		href: "https://docs.google.com/forms/d/e/1FAIpQLSfC_Zc8xWA-dJJYbjJJUL5sr-LtRgrAgrmsCc6A2UAVw-obng/viewform",
+		image: HAndHEvent,
 		translationKey: "networking",
 	},
 	{
-		href: "https://www.linkedin.com/posts/unsw-australia-japan-career-development-society_today-the-unsw-australia-japan-career-development-activity-7313813439414468608-xGh-",
-		image: linkedInEvent,
-		translationKey: "workshop",
+		href: "https://regu-20105603.hs-sites.com/kpmg-aus25",
+		image: KPMGEvent,
+		translationKey: "networking",
+	},
+	{
+		href: "https://global.mynavi.jp/conts/event/aus_mcs2025jul/?utm_source=studentpartnar&utm_medium=textl&utm_campaign=2507",
+		image: MyNaviEvent,
+		translationKey: "networking",
 	},
 ] as const;
 

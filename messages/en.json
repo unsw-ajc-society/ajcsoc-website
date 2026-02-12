@@ -41,7 +41,8 @@
 		},
 		"UpcomingSocialEvents": {
 			"events": {
-				"bbq": "AJC BBQ"
+				"bbq": "AJC BBQ",
+				"oweek": "AJC O-Week"
 			},
 			"title": "Click to see our upcoming social events!"
 		}
