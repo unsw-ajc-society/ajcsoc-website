@@ -8,8 +8,5 @@
 	"files": [],
 	// Use "solution-style" tsconfig to include multiple tsconfig files
 	// ref: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#support-for-solution-style-tsconfigjson-files
-	"references": [
-		{ "path": "./tsconfig.app.json" },
-		{ "path": "./tsconfig.base.json" }
-	]
+	"references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.base.json" }]
 }

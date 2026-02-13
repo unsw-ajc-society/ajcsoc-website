@@ -17,9 +17,7 @@ export default function UpcomingSocialEvents() {
 	return (
 		<section className="w-full px-4 py-8">
 			<div className=" mx-auto flex w-full flex-col items-center">
-				<h2 className="mb-10 text-center font-bold text-2xl md:text-4xl">
-					{t("title")}
-				</h2>
+				<h2 className="mb-10 text-center font-bold text-2xl md:text-4xl">{t("title")}</h2>
 				<div className="flex w-full flex-wrap justify-center gap-[4vw]">
 					{events.map(({ translationKey, href, image }) => {
 						const EventImage = (

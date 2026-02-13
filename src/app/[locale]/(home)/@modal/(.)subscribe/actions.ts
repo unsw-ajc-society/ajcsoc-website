@@ -1,11 +1,7 @@
-// biome-ignore-all lint/suspicious/noConsole: logging is acceptable in server actions
-
 "use server";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import GoogleAuth, {
-	type GoogleKey,
-} from "cloudflare-workers-and-google-oauth";
+import GoogleAuth, { type GoogleKey } from "cloudflare-workers-and-google-oauth";
 import { z } from "zod";
 
 // Max attempts to retry appending data to Google Sheets
@@ -39,8 +35,7 @@ export async function subscribeNewsletter(
 	if (zodError) {
 		console.log({
 			zodError: zodError.message,
-			zodErrorMessage:
-				"Invalid form data submitted for newsletter subscription.",
+			zodErrorMessage: "Invalid form data submitted for newsletter subscription.",
 		});
 		return {
 			message: zodError.message,
@@ -52,9 +47,7 @@ export async function subscribeNewsletter(
 
 	// ref: https://developers.google.com/identity/protocols/oauth2/scopes#sheets
 	const scopes = ["https://www.googleapis.com/auth/spreadsheets"];
-	const googleAuth = JSON.parse(
-		env.GOOGLE_SERVICE_ACCOUNT_KEY || "{}",
-	) as GoogleKey;
+	const googleAuth = JSON.parse(env.GOOGLE_SERVICE_ACCOUNT_KEY || "{}") as GoogleKey;
 
 	let token: string | undefined;
 	try {
@@ -89,9 +82,7 @@ export async function subscribeNewsletter(
 				values: [[validatedEmail, validatedName, new Date().toISOString()]],
 			}),
 			headers: {
-				// biome-ignore lint/style/useNamingConvention: HTTP header
 				Accept: "application/json",
-				// biome-ignore lint/style/useNamingConvention: HTTP header
 				Authorization: `Bearer ${token}`,
 				"Content-Type": "application/json",
 			},
@@ -100,7 +91,6 @@ export async function subscribeNewsletter(
 
 	for (let attempt = 0; attempt < MAX_ATTEMPTS; attempt++) {
 		try {
-			// biome-ignore lint/nursery/noAwaitInLoop: we need to wait for the result
 			await appendData();
 			break;
 		} catch (error) {
@@ -110,8 +100,7 @@ export async function subscribeNewsletter(
 			});
 			if (attempt === MAX_ATTEMPTS - 1) {
 				return {
-					message:
-						"Cannot subscribe to newsletter due to a internal server error.",
+					message: "Cannot subscribe to newsletter due to a internal server error.",
 					success: false,
 				};
 			}

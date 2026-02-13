@@ -6,24 +6,24 @@
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/unsw-ajc-society/ajcsoc-website.git
-    cd ajcsoc-website
-    ```
+   ```bash
+   git clone https://github.com/unsw-ajc-society/ajcsoc-website.git
+   cd ajcsoc-website
+   ```
 
 2. Install mise
 
-    > [\!IMPORTANT]
-    > Follow the [instructions](https://mise.jdx.dev/getting-started.html). Make sure you activate mise in your shell.
+   > [\!IMPORTANT]
+   > Follow the [instructions](https://mise.jdx.dev/getting-started.html). Make sure you activate mise in your shell.
 
 3. Install dependencies:
 
-    ```bash
-    # Trust mise config
-    mise trust
-    # Install Node.js, Bun, and dependencies in package.json
-    mise install
-    ```
+   ```bash
+   # Trust mise config
+   mise trust
+   # Install Node.js, Bun, and dependencies in package.json
+   mise install
+   ```
 
 ### Running the Development Server
 
