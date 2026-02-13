@@ -45,6 +45,12 @@
 				"oweek": "AJC O-Week"
 			},
 			"title": "Click to see our upcoming social events!"
+		},
+		"Featured": {
+			"subcomTitle": "Apply Now",
+			"subcomAlt": "Join our subcommittee!",
+			"welcomeTitle": "Register Now",
+			"welcomeAlt": "Come to our welcome event!"
 		}
 	},
 	"Metadata": {

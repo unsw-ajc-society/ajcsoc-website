@@ -7,7 +7,8 @@ import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
 import Sponsors from "./components/Sponsors";
 // import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
-import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
+// import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
+import Featured from "./components/Featured";
 import ajcLogo from "./images/large-logo.png";
 
 export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -34,7 +35,8 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
 			<SocialIcons />
 			<AboutUs />
 			{/* <UpcomingCareerEvents /> */}
-			<UpcomingSocialEvents />
+			<Featured />
+			{/* <UpcomingSocialEvents /> */}
 			<PastEvents />
 			<Sponsors />
 			<h2 className="mt-8 mb-10 text-center font-bold text-4xl">{t("socialConnectPrompt")}</h2>

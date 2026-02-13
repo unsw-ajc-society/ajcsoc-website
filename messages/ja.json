@@ -44,7 +44,13 @@
 				"bbq": "AJC BBQ",
 				"oweek": "AJC O-Week"
 			},
-			"title": "今後のイベント"
+			"title": "今後のイベントも要チェック！"
+		},
+		"Featured": {
+			"subcomTitle": "応募する",
+			"subcomAlt": "応募はこちらから",
+			"welcomeTitle": "参加登録",
+			"welcomeAlt": "参加登録はこちらから"
 		}
 	},
 	"Metadata": {
