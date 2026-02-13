@@ -37,15 +37,5 @@
 		"oxlint": "1.47.0",
 		"tailwindcss": "4.1.18",
 		"typescript": "5.9.3"
-	},
-	"devEngines": {
-		"packageManager": {
-			"name": "npm",
-			"version": "10.9.2"
-		},
-		"runtime": {
-			"name": "node",
-			"version": "22.16.0"
-		}
 	}
 }
