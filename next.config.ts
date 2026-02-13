@@ -10,8 +10,8 @@ const nextConfig = withNextIntl({
 		// Enable since we only have single page
 		// ref: https://nextjs.org/docs/app/api-reference/config/next-config-js/inlineCss
 		inlineCss: true,
-		typedRoutes: true,
 	},
+	typedRoutes: true,
 	typescript: {
 		tsconfigPath: "./tsconfig.app.json",
 	},

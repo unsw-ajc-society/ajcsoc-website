@@ -16,10 +16,5 @@
 	"exclude": ["node_modules"],
 	// Use a shared tsconfig with strict options
 	"extends": "@risu729/tsconfigs/bundler",
-	"include": [
-		"cloudflare-env.d.ts",
-		"next-env.d.ts",
-		"src",
-		".next/types/**/*.ts"
-	]
+	"include": ["cloudflare-env.d.ts", "next-env.d.ts", "src", ".next/types/**/*.ts"]
 }

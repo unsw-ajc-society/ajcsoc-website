@@ -10,12 +10,8 @@ import Sponsors from "./components/Sponsors";
 import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
 import ajcLogo from "./images/large-logo.png";
 
-export default function HomePage({
-	params,
-}: {
-	params: Promise<{ locale: Locale }>;
-}) {
-	const { locale } = use(params);
+export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+	const { locale } = use(params) as { locale: Locale };
 	// Enable static rendering
 	// ref: https://next-intl.dev/docs/getting-started/app-router/with-i18n-routing#static-rendering
 	setRequestLocale(locale);
@@ -25,12 +21,7 @@ export default function HomePage({
 
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-items-center pb-15">
-			<Image
-				alt="AJC Society logo"
-				className="h-auto w-2/5"
-				priority={true}
-				src={ajcLogo}
-			/>
+			<Image alt="AJC Society logo" className="h-auto w-2/5" priority={true} src={ajcLogo} />
 			{/* <Link
 				className="mb-4 rounded bg-ajc-red px-4 py-2 text-2xl text-white"
 				href="/"
@@ -46,9 +37,7 @@ export default function HomePage({
 			<UpcomingSocialEvents />
 			<PastEvents />
 			<Sponsors />
-			<h2 className="mt-8 mb-10 text-center font-bold text-4xl">
-				{t("socialConnectPrompt")}
-			</h2>
+			<h2 className="mt-8 mb-10 text-center font-bold text-4xl">{t("socialConnectPrompt")}</h2>
 			<SocialIcons />
 		</main>
 	);

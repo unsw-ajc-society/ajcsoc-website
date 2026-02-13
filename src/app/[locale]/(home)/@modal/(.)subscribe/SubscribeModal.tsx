@@ -52,11 +52,7 @@ export default function SubscribeModal() {
 								required={true}
 								type="email"
 							/>
-							<button
-								className="btn btn-primary text-white"
-								disabled={isPending}
-								type="submit"
-							>
+							<button className="btn btn-primary text-white" disabled={isPending} type="submit">
 								{isPending ? t("buttonTextPending") : t("buttonText")}
 							</button>
 						</form>
