@@ -10,8 +10,8 @@ import Sponsors from "./components/Sponsors";
 import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
 import ajcLogo from "./images/large-logo.png";
 
-export default function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
-	const { locale } = use(params);
+export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+	const { locale } = use(params) as { locale: Locale };
 	// Enable static rendering
 	// ref: https://next-intl.dev/docs/getting-started/app-router/with-i18n-routing#static-rendering
 	setRequestLocale(locale);
