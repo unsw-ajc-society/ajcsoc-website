@@ -18,7 +18,7 @@
 	"dependencies": {
 		"@opennextjs/cloudflare": "1.16.5",
 		"cloudflare-workers-and-google-oauth": "2.0.0",
-		"daisyui": "5.5.18",
+		"daisyui": "5.5.19",
 		"esbuild": "0.27.3",
 		"next": "16.1.6",
 		"next-intl": "4.8.3",
