@@ -42,7 +42,8 @@
 		"UpcomingSocialEvents": {
 			"events": {
 				"bbq": "AJC BBQ",
-				"oweek": "AJC O-Week"
+				"oweek": "AJC O-Week",
+				"studySession": "勉強会"
 			},
 			"title": "今後のイベントも要チェック！"
 		},
