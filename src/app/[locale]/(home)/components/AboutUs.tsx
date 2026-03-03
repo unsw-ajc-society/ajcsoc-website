@@ -27,7 +27,7 @@ export default function AboutUs() {
 					<div className="mt-4 flex">
 						<Link
 							className="mx-auto inline-block min-w-[250px] whitespace-nowrap rounded bg-primary px-2 py-2 text-center text-white uppercase shadow hover:scale-110 hover:shadow-lg"
-							href="https://docs.google.com/forms/d/e/1FAIpQLSdLpdySwPRQIvRFLDBuG8sDZ8VVBDTKqasKxftTqJh52Gar3g/viewform"
+							href="https://campus.hellorubric.com/?tab=memberships&s=12445"
 							rel="noopener noreferrer"
 							target="_blank"
 						>
