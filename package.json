@@ -19,7 +19,7 @@
 		"@opennextjs/cloudflare": "1.17.1",
 		"cloudflare-workers-and-google-oauth": "2.0.0",
 		"daisyui": "5.5.19",
-		"esbuild": "0.27.3",
+		"esbuild": "0.27.4",
 		"next": "16.1.6",
 		"next-intl": "4.8.3",
 		"react": "19.2.4",
