@@ -16,7 +16,7 @@
 		"upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload"
 	},
 	"dependencies": {
-		"@opennextjs/cloudflare": "1.18.0",
+		"@opennextjs/cloudflare": "1.18.1",
 		"cloudflare-workers-and-google-oauth": "2.0.0",
 		"daisyui": "5.5.19",
 		"esbuild": "0.28.0",
