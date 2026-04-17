@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
-import mynaviLogo from "../images/sponsors/mynavi-logo.png";
 import persolkellyLogo from "../images/sponsors/persolkelly-logo.png";
 
 const sponsors = [
@@ -15,11 +14,6 @@ const sponsors = [
 		href: "https://www.persolkelly.com.au",
 		image: persolkellyLogo,
 		name: "PERSOLKELLY",
-	},
-	{
-		href: "https://www.mynavi.jp/eng/",
-		image: mynaviLogo,
-		name: "Mynavi",
 	},
 ] as const;
 
