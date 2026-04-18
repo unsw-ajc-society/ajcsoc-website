@@ -60,5 +60,28 @@
 		"fullName": "Australia-Japan Career Development Society",
 		"shortDescription": "Build a global career! Join {shortName} and connect with opportunities in Japan and Australia.",
 		"shortName": "AJC Society UNSW"
+	},
+	"Navigation": {
+		"home": "Home",
+		"archive": "Archive",
+		"newsletter": "Newsletter",
+		"articles": "Articles"
+	},
+	"ArchivePage": {
+		"title": "AJC Archive",
+		"subtitle": "A living record of AJC publications and member writing.",
+		"newsletter": "Newsletter",
+		"articles": "Articles",
+		"readOnline": "Read Online →",
+		"feature": "Feature: {title} →",
+		"categories": {
+			"All": "All",
+			"Business": "Business",
+			"Culture": "Culture",
+			"Careers": "Careers",
+			"Events": "Events"
+		},
+		"loadMore": "Load More",
+		"noArticles": "No articles found."
 	}
 }

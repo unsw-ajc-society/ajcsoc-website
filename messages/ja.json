@@ -60,5 +60,28 @@
 		"fullName": "オーストラリア・日本キャリアサークル",
 		"shortDescription": "{shortName}に参加して、日本とオーストラリアでキャリアを築く機会をつかみましょう",
 		"shortName": "AJC Society UNSW"
+	},
+	"Navigation": {
+		"home": "ホーム",
+		"archive": "アーカイブ",
+		"newsletter": "ニュースレター",
+		"articles": "記事"
+	},
+	"ArchivePage": {
+		"title": "AJC アーカイブ",
+		"subtitle": "AJCの出版物やメンバーの執筆記事の記録。",
+		"newsletter": "ニュースレター",
+		"articles": "記事",
+		"readOnline": "オンラインで読む →",
+		"feature": "特集: {title} →",
+		"categories": {
+			"All": "すべて",
+			"Business": "ビジネス",
+			"Culture": "文化",
+			"Careers": "キャリア",
+			"Events": "イベント"
+		},
+		"loadMore": "もっと読み込む",
+		"noArticles": "記事が見つかりません。"
 	}
 }
