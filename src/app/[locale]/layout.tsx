@@ -5,6 +5,7 @@ import { hasLocale, type Locale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import { routing } from "../../i18n/routing";
+import Navbar from "./components/Navbar";
 
 export async function generateMetadata({
 	params,
@@ -62,7 +63,10 @@ export default async function RootLayout({
 	return (
 		<html lang={locale}>
 			<body className="h-full w-full bg-background font-sans text-text">
-				<NextIntlClientProvider>{children}</NextIntlClientProvider>
+				<NextIntlClientProvider>
+					<Navbar />
+					{children}
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
