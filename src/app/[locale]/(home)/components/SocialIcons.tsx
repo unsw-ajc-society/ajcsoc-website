@@ -7,25 +7,25 @@ const socials = [
 		hoverColour: "group-hover:fill-pink-500",
 		href: "https://www.instagram.com/ajcsocunsw/",
 		icon: FaInstagram,
-		key: "instagram",
+		label: "Instagram",
 	},
 	{
 		hoverColour: "group-hover:fill-blue-500",
 		href: "https://www.facebook.com/people/UNSW-Australia-Japan-Career-Development-Society-AJC/100095045665332/",
 		icon: FaFacebook,
-		key: "facebook",
+		label: "Facebook",
 	},
 	{
 		hoverColour: "group-hover:fill-blue-700",
 		href: "https://www.linkedin.com/company/unsw-australia-japan-career-development-society",
 		icon: FaLinkedin,
-		key: "linkedin",
+		label: "LinkedIn",
 	},
 	{
 		hoverColour: "group-hover:fill-blue-700",
 		href: "https://discord.gg/a3KJ49CwaZ",
 		icon: FaDiscord,
-		key: "discord",
+		label: "Discord",
 	},
 ] as const;
 
@@ -33,30 +33,26 @@ export default function SocialIcons() {
 	const t = useTranslations("HomePage.Social");
 
 	return (
-		<section>
-			<div className="flex items-center gap-x-[5vw]">
-				{socials.map(({ href, icon: Icon, hoverColour, key }) => (
+		<section className="flex flex-col items-center gap-5 md:gap-8">
+			<div className="flex flex-wrap items-center justify-center gap-3 md:gap-5">
+				{socials.map(({ href, icon: Icon, hoverColour, label }) => (
 					<Link
-						className="group"
+						aria-label={label}
+						className="tooltip btn btn-ghost btn-circle group h-14 w-14 min-h-14 text-base-content hover:bg-base-200"
+						data-tip={label}
 						href={href}
-						key={key}
+						key={label}
 						{...(href.startsWith("http") ? { rel: "noopener noreferrer", target: "_blank" } : {})}
 					>
 						<Icon
-							className={`h-auto w-[5vw] min-w-[55px] transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
+							className={`size-8 transition-transform duration-300 group-hover:scale-110 ${hoverColour}`}
 						/>
 					</Link>
 				))}
 			</div>
-			<div className="justify-centre mt-5 flex md:mt-8">
-				<Link
-					className="mx-auto inline-block min-w-[280px] whitespace-nowrap rounded bg-primary px-2 py-2 text-center text-white uppercase shadow hover:scale-105 hover:shadow-lg"
-					href="/subscribe"
-					prefetch={true}
-				>
-					{t("subscribe")}
-				</Link>
-			</div>
+			<Link className="btn btn-primary btn-wide uppercase" href="/subscribe" prefetch={true}>
+				{t("subscribe")}
+			</Link>
 		</section>
 	);
 }

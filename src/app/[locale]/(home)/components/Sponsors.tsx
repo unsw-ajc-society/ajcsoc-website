@@ -21,23 +21,25 @@ export default function Sponsors() {
 	const t = useTranslations("HomePage.Sponsors");
 
 	return (
-		<section className="w-full px-4 py-8">
-			<div className=" mx-auto flex w-full flex-col items-center">
-				<h2 className="mb-10 text-center font-bold text-2xl md:text-4xl">{t("title")}</h2>
+		<section className="w-full bg-base-100 px-4 py-8">
+			<div className="mx-auto flex w-full flex-col items-center">
+				<h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">{t("title")}</h2>
 				<div className="flex w-full flex-wrap justify-center gap-[15vw]">
 					{sponsors.map(({ name, href, image }) => (
 						<Link
-							className="group w-[10%] min-w-[60px] flex-wrap rounded-xl bg-white shadow transition duration-300 hover:shadow-lg"
+							className="card group w-[10%] min-w-[60px] overflow-hidden bg-base-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
 							href={href}
 							key={name}
 							rel="noopener noreferrer"
 							target="_blank"
 						>
-							<Image
-								alt={name}
-								className="h-full w-full rounded-xl object-contain shadow transition-transform duration-300 hover:shadow-lg group-hover:scale-110"
-								src={image}
-							/>
+							<figure>
+								<Image
+									alt={name}
+									className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+									src={image}
+								/>
+							</figure>
 						</Link>
 					))}
 				</div>

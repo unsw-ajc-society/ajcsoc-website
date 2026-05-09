@@ -4,49 +4,49 @@ import { Link } from "../../../../i18n/navigation";
 import subcomRecruitment from "../images/subcom-recruitment.png";
 import welcomeEvent from "../images/welcome-event.png";
 
+const features = [
+	{
+		altKey: "subcomAlt",
+		href: "https://forms.gle/tsGYkz3nnXCzL9UcA",
+		image: subcomRecruitment,
+		titleKey: "subcomTitle",
+	},
+	{
+		altKey: "welcomeAlt",
+		href: "https://forms.gle/eP9ruxk9DGujmdWE8",
+		image: welcomeEvent,
+		titleKey: "welcomeTitle",
+	},
+] as const;
+
 export default function Featured() {
 	const t = useTranslations("HomePage.Featured");
 
 	return (
-		<section className="w-full px-4 py-8">
+		<section className="w-full bg-base-100 px-4 py-8">
 			<div className="mx-auto flex w-full flex-col items-center">
-				<h2 className="mb-10 text-center font-bold text-2xl md:text-4xl">{t("title")}</h2>
-				<div className="flex w-full flex-col items-center gap-8 md:flex-row md:justify-center md:items-start">
-					<div className="flex flex-col items-center gap-4 w-full md:w-1/4 group">
+				<h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">{t("title")}</h2>
+				<div className="grid w-full max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
+					{features.map(({ altKey, href, image, titleKey }) => (
 						<Link
-							href="https://forms.gle/tsGYkz3nnXCzL9UcA"
+							className="card group bg-base-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+							href={href}
+							key={href}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex flex-col items-center gap-4 w-full transition-transform hover:scale-105"
 						>
-							<Image
-								src={subcomRecruitment}
-								alt={t("subcomAlt")}
-								className="h-auto w-full rounded-lg shadow-lg"
-							/>
-							<span className="rounded-full bg-ajc-red px-6 py-2 text-white font-bold shadow-md transition-colors hover:bg-red-700">
-								{t("subcomTitle")}
-							</span>
+							<figure>
+								<Image
+									alt={t(altKey)}
+									className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
+									src={image}
+								/>
+							</figure>
+							<div className="card-body items-center p-4">
+								<span className="btn btn-primary btn-wide">{t(titleKey)}</span>
+							</div>
 						</Link>
-					</div>
-
-					<div className="flex flex-col items-center gap-4 w-full md:w-1/4 group">
-						<Link
-							href="https://forms.gle/eP9ruxk9DGujmdWE8"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="flex flex-col items-center gap-4 w-full transition-transform hover:scale-105"
-						>
-							<Image
-								src={welcomeEvent}
-								alt={t("welcomeAlt")}
-								className="h-auto w-full rounded-lg shadow-lg"
-							/>
-							<span className="rounded-full bg-ajc-red px-6 py-2 text-white font-bold shadow-md transition-colors hover:bg-red-700">
-								{t("welcomeTitle")}
-							</span>
-						</Link>
-					</div>
+					))}
 				</div>
 			</div>
 		</section>

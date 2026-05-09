@@ -6,9 +6,7 @@ import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
 import Sponsors from "./components/Sponsors";
-// import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
 import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
-// import Featured from "./components/Featured";
 import ajcLogo from "./images/large-logo.png";
 
 export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -18,29 +16,29 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
 	setRequestLocale(locale);
 	const t = useTranslations("HomePage");
 
-	// const switchTargetLocale = locale === "en" ? "ja" : "en";
-
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-items-center pb-15">
-			<Image alt="AJC Society logo" className="h-auto w-2/5" priority={true} src={ajcLogo} />
-			{/* <Link
-				className="mb-4 rounded bg-ajc-red px-4 py-2 text-2xl text-white"
-				href="/"
-				locale={switchTargetLocale}
-			>
-				{t("switchLocale", {
-					locale: switchTargetLocale === "en" ? "英語" : "Japanese",
-				})}
-			</Link> */}
-			<SocialIcons />
+		<main className="min-h-screen bg-base-100 pb-15 text-base-content">
+			<section className="hero px-4 py-8">
+				<div className="hero-content flex-col">
+					<Image
+						alt="AJC Society logo"
+						className="h-auto w-2/5 min-w-[220px] max-w-lg"
+						priority={true}
+						src={ajcLogo}
+					/>
+					<SocialIcons />
+				</div>
+			</section>
 			<AboutUs />
-			{/* <UpcomingCareerEvents /> */}
-			{/* <Featured /> */}
 			<UpcomingSocialEvents />
 			<PastEvents />
 			<Sponsors />
-			<h2 className="mt-8 mb-10 text-center font-bold text-4xl">{t("socialConnectPrompt")}</h2>
-			<SocialIcons />
+			<section className="hero px-4 py-8">
+				<div className="hero-content flex-col text-center">
+					<h2 className="text-4xl font-bold">{t("socialConnectPrompt")}</h2>
+					<SocialIcons />
+				</div>
+			</section>
 		</main>
 	);
 }
