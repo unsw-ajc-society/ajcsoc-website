@@ -17,7 +17,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
 	const t = useTranslations("HomePage");
 
 	return (
-		<main className="min-h-screen bg-base-100 pb-15 text-base-content">
+		<main className="min-h-screen bg-base-100 pb-16 text-base-content">
 			<section className="hero px-4 py-8">
 				<div className="hero-content flex-col">
 					<Image
