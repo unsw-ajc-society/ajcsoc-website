@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
+import mynaviLogo from "../images/sponsors/mynavi-kokusaiha-logo.webp";
 
 const sponsors = [
 	{
@@ -9,6 +10,11 @@ const sponsors = [
 		image: hnhLogo,
 		name: "H & H Lawyers",
 	},
+	{
+		href: "https://www.mynavi.jp/",
+		image: mynaviLogo,
+		name: "Mynavi",
+	}
 ] as const;
 
 export default function Sponsors() {
@@ -21,7 +27,7 @@ export default function Sponsors() {
 				<div className="flex w-full flex-wrap justify-center gap-[15vw]">
 					{sponsors.map(({ name, href, image }) => (
 						<Link
-							className="card group w-[10%] min-w-[60px] overflow-hidden bg-base-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+							className="card justify-center group w-[12%] min-w-[60px] overflow-hidden bg-base-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
 							href={href}
 							key={name}
 							rel="noopener noreferrer"
