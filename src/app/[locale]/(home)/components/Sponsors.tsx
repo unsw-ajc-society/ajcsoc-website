@@ -2,18 +2,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
-import persolkellyLogo from "../images/sponsors/persolkelly-logo.png";
 
 const sponsors = [
 	{
 		href: "https://www.hhlaw.com.au/eng",
 		image: hnhLogo,
 		name: "H & H Lawyers",
-	},
-	{
-		href: "https://www.persolkelly.com.au",
-		image: persolkellyLogo,
-		name: "PERSOLKELLY",
 	},
 ] as const;
 
