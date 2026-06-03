@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
 import mynaviLogo from "../images/sponsors/mynavi-kokusaiha-logo.webp";
+import sushiTrainLogo from "../images/sponsors/sushi-train-logo.webp";
 
 const sponsors = [
 	{
@@ -14,6 +15,11 @@ const sponsors = [
 		href: "https://www.mynavi.jp/",
 		image: mynaviLogo,
 		name: "Mynavi",
+	},
+	{
+		href: "https://linktr.ee/sushitrain.maroubra",
+		image: sushiTrainLogo,
+		name: "Sushi Train Maroubra"
 	}
 ] as const;
 
