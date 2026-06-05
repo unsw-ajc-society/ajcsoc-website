@@ -50,9 +50,11 @@ export default function SocialIcons() {
 					</Link>
 				))}
 			</div>
-			<Link className="btn btn-primary btn-wide uppercase" href="/subscribe" prefetch={true}>
+			
+			{/* Reimplement below another time */}
+			{/* <Link className="btn btn-primary btn-wide uppercase" href="/subscribe" prefetch={true}>
 				{t("subscribe")}
-			</Link>
+			</Link> */}
 		</section>
 	);
 }
