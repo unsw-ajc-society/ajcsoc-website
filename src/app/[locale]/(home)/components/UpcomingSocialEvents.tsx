@@ -2,12 +2,18 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
 import studySession from "../images/events/study-session.jpg";
+import vividEvent2026 from "../images/events/vivid-event.jpg";
 
 const events = [
 	{
 		href: "https://www.instagram.com/p/DVXaw-gjyqB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
 		image: studySession,
 		translationKey: "studySession",
+	},
+	{
+		href: "https://docs.google.com/forms/d/e/1FAIpQLScotDF1LlH0Ld3NZy3d_kfs2w0QhL7q584qvO04qemovrIpyw/viewform?usp=publish-editor",
+		image: vividEvent2026,
+		translationKey: "vividEvent2026",
 	},
 ] as const;
 
