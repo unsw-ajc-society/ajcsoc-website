@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ajcLogo from "./../images/large-logo.png";
 import SocialIcons from "./SocialIcons";
-import Link from 'next/link'
+import { Link } from "../../../../i18n/navigation";
 
 const NavBar = () => {
     return (
