@@ -2,6 +2,7 @@ import Image from "next/image";
 import { type Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
+// import NavBar from "./components/NavBar";
 import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
@@ -18,6 +19,8 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
 
 	return (
 		<main className="min-h-screen bg-base-100 pb-16 text-base-content">
+			{/* <NavBar /> */}
+
 			<section className="hero px-4 py-8">
 				<div className="hero-content flex-col">
 					<Image

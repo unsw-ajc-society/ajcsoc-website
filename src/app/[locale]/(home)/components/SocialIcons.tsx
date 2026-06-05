@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "../../../../i18n/navigation";
 
@@ -30,7 +30,7 @@ const socials = [
 ] as const;
 
 export default function SocialIcons() {
-	const t = useTranslations("HomePage.Social");
+	// const t = useTranslations("HomePage.Social");
 
 	return (
 		<section className="flex flex-col items-center gap-5 md:gap-8">
@@ -50,9 +50,11 @@ export default function SocialIcons() {
 					</Link>
 				))}
 			</div>
-			<Link className="btn btn-primary btn-wide uppercase" href="/subscribe" prefetch={true}>
+
+			{/* Reimplement below another time */}
+			{/* <Link className="btn btn-primary btn-wide uppercase" href="/subscribe" prefetch={true}>
 				{t("subscribe")}
-			</Link>
+			</Link> */}
 		</section>
 	);
 }
