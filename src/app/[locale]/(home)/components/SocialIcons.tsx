@@ -29,7 +29,11 @@ const socials = [
 	},
 ] as const;
 
-export default function SocialIcons() {
+interface tooltipPosProps {
+    tooltipPos?: "top" | "bottom";
+}
+
+export default function SocialIcons({ tooltipPos = "top" }: tooltipPosProps) {
 	// const t = useTranslations("HomePage.Social");
 
 	return (
@@ -38,7 +42,7 @@ export default function SocialIcons() {
 				{socials.map(({ href, icon: Icon, hoverColour, label }) => (
 					<Link
 						aria-label={label}
-						className="tooltip btn btn-ghost btn-circle group h-14 w-14 min-h-14 text-base-content hover:bg-base-200"
+						className={`tooltip tooltip-${tooltipPos} btn btn-ghost btn-circle group h-14 w-14 min-h-14 text-base-content hover:bg-base-200`}
 						data-tip={label}
 						href={href}
 						key={label}
