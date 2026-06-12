@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ajcLogo from "./../images/large-logo.png";
+import LanguageSelect from "./LanguageSelect";
 import SocialIcons from "./SocialIcons";
 import { Link } from "../../../../i18n/navigation";
 
@@ -72,8 +73,9 @@ const NavBar = () => {
                         </Link>
                     ))}
                 </div>
-                <div className="ml-auto flex items-center gap-4">
-                    <SocialIcons tooltipPos='bottom' />
+                <div className="ml-auto flex items-center gap-8">
+                  <LanguageSelect />
+                  <SocialIcons tooltipPos='bottom' />
                 </div>
             </nav>
         </section>
