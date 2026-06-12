@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
-import teamPicture from "../images/team-2025.png";
+import teamPicture from "../images/induction_photo.png";
 
 export default function AboutUs() {
 	const t = useTranslations("HomePage.AboutUs");
@@ -11,7 +11,7 @@ export default function AboutUs() {
 			<div className="hero-content flex-col gap-8 px-6 md:flex-row md:px-10">
 				<figure className="flex justify-center md:w-1/2">
 					<Image
-						alt="Picture of Our 2025 Team"
+						alt="Picture of Our Induction"
 						className="h-full w-full rounded-box object-cover shadow-lg"
 						src={teamPicture}
 					/>
