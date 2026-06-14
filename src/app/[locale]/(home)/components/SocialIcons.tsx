@@ -23,7 +23,7 @@ const socials = [
 	},
 	{
 		hoverColour: "group-hover:fill-blue-700",
-		href: "https://discord.gg/a3KJ49CwaZ",
+		href: "https://discord.gg/BC6VRAe3HV",
 		icon: FaDiscord,
 		label: "Discord",
 	},
