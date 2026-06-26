@@ -51,73 +51,81 @@ const newsletters = [
 
 
 export default function Archive() {
-	const [selected, setSelected] = useState(newsletters[0]);
+	const [selected, setSelected] = useState(newsletters[0] ?? null);
+
+	if (!selected) {
+		return (
+			<section className="w-full bg-base-100 px-4 py-16 text-center" id="newsletters">
+				<p className="text-base-content/60">No newsletters available yet :{'('}</p>
+			</section>
+		)
+	};
 
 	return (
 	<section className="w-full bg-base-100 px-4 py-16" id="newsletters">
 		<div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
-		{/* Left column list */}
-		<div className="max-h-[600px] overflow-y-auto pr-2 flex flex-col gap-4">
-			{newsletters.map((newsletter) => {
-			const isActive = newsletter.title === selected.title;
-			return (
-				<button
-				key={newsletter.title}
-				onClick={() => setSelected(newsletter)}
-				className={`text-left rounded-box border p-4 transition-colors ${isActive ? "border-primary bg-primary/5" : "border-base-300 hover:border-primary/50"}`}
-				>
-				<h3 className="font-semibold">{newsletter.title}</h3>
-				<p className="text-sm text-base-content/60 mt-1">{newsletter.date}</p>
-				<div className="flex gap-4 mt-2 text-sm">
-					<Link
-					href={newsletter.hrefEnglish}
-					target="_blank"
-					className="link link-primary"
-					onClick={event => event.stopPropagation()}
-					>
-					Read Online
-					</Link>
-					<Link
-					href={newsletter.hrefJapanese}
-					target="_blank"
-					className="link link-primary"
-					onClick={event => event.stopPropagation()}
-					>
-					日本語で読む
-					</Link>
-				</div>
-				</button>
-			);
-			})}
-		</div>
+			{/* Left column list */}
+			<div className="max-h-[600px] overflow-y-auto pr-2 flex flex-col gap-4">
+				{newsletters.map((newsletter) => {
+					const isActive = newsletter.title === selected.title;
+					return (
+						<button
+							key={newsletter.title}
+							onClick={() => setSelected(newsletter)}
+							className={`text-left rounded-box border p-4 transition-colors ${isActive ? "border-primary bg-primary/5" : "border-base-300 hover:border-primary/50"}`}
+						>
+							<h3 className="font-semibold">{newsletter.title}</h3>
+							<p className="text-sm text-base-content/60 mt-1">{newsletter.date}</p>
+							<div className="flex gap-4 mt-2 text-sm">
+								<Link
+									href={newsletter.hrefEnglish}
+									target="_blank"
+									className="link link-primary"
+									onClick={event => event.stopPropagation()}
+								>
+									Read Online
+								</Link>
+								<Link
+									href={newsletter.hrefJapanese}
+									target="_blank"
+									className="link link-primary"
+									onClick={event => event.stopPropagation()}
+								>
+									日本語で読む
+								</Link>
+							</div>
+						</button>
+					);
+				})}
+			</div>
 
-		{/* Right column card previews */}
-		<div className="flex items-center justify-center">
-			<div
-			key={selected.title}
-			className="card bg-base-100 w-96 shadow-sm animate-slide-up"
-			>
-			<figure>
-				<img
-				src={selected.image}
-				alt={`${selected.title} Cover Image`}
-				/>
-			</figure>
-			<div className="card-body">
-				<h2 className="card-title">{selected.title}</h2>
-				<p>{selected.description}</p>
-				<h2 className="card-title">Keep reading:</h2>
-				<div className="card-actions justify-end">
-				<Link className="btn btn-primary" href={selected.hrefEnglish} target="_blank">
-					Read Online
-				</Link>
-				<Link className="btn btn-primary" href={selected.hrefJapanese} target="_blank">
-					日本語で読む
-				</Link>
+			{/* Right column card previews */}
+			<div className="flex items-center justify-center">
+				<div
+					key={selected.title}
+					className="card bg-base-100 w-96 shadow-sm animate-slide-up"
+				>
+					<figure>
+						<img
+							src={selected.image}
+							alt={`${selected.title} Cover Image`}
+						/>
+					</figure>
+					<div className="card-body">
+						<h2 className="card-title">{selected.title}</h2>
+						<p>{selected.description}</p>
+						<h2 className="card-title">Keep reading:</h2>
+						<div className="card-actions justify-end">
+							<Link className="btn btn-primary" href={selected.hrefEnglish} target="_blank">
+								Read Online
+							</Link>
+							<Link className="btn btn-primary" href={selected.hrefJapanese} target="_blank">
+								日本語で読む
+							</Link>
+						</div>
+					</div>
 				</div>
 			</div>
-			</div>
-		</div>
 		</div>
 		
 		{/* Card slide up from down animation */}
