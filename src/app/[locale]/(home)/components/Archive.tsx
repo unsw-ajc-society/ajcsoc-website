@@ -17,7 +17,7 @@ const newsletters = [
 	{
 		image: "https://storage.mlcdn.com/account_image/2097742/j2AsNv4lMnmrv1MuLaKbglQE89Cd89dGYFJiWEaa.png",
 		title: "2026 Term 2 Edition 4",
-		date: "May 2026",
+		date: "June 2026",
 		description: "With term 2 now underway, there's plenty to look forward to—keep a heads up for upcoming AJC events and announcements! In this week's edition, we have a roundup of some exciting events...",
 		hrefEnglish: "https://preview.mailerlite.io/emails/webview/2097742/189244176002450455",
 		hrefJapanese: "https://preview.mailerlite.io/emails/webview/2097742/189244175610283289",
@@ -33,7 +33,7 @@ const newsletters = [
 	{
 		image: "https://storage.mlcdn.com/account_image/2097742/Tu5aI4UZgErW6FHnM9zZmB0e2Tu8c7pBWQ25QK4b.png",
 		title: "2026 Term 1 Edition 2",
-		date: "March 2026",
+		date: "April 2026",
 		description: "We hope you had a lovely Easter break 😆🐰In this newsletter, we welcome our 2026 Subcommittee, recap recent events, and highlight upcoming opportunities such as the TKF campus visit...",
 		hrefEnglish: "https://preview.mailerlite.io/emails/webview/2097742/184170898429838881",
 		hrefJapanese: "https://preview.mailerlite.io/emails/webview/2097742/184170799749399556",
