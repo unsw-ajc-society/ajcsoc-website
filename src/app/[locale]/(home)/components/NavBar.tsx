@@ -7,9 +7,12 @@ import { Link } from "../../../../i18n/navigation";
 const navigationPages = [
     { name: "About Us", href: "/about-us" },
     { name: "Events", href: "/events" },
-    { name: "Archive", href: "/archive" },
+    { name: "Archive", href: "/archive", dropdown: [        // remove href for this? Keep for now until dropdowns are implemented
+        { name: "Newsletter", href: "/newsletter" },
+        { name: "Articles", href: "/articles" }
+    ] },
     { name: "Contact Us", href: "/contact-us" }
-]
+];
 
 const NavBar = () => {
     return (
