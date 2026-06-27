@@ -7,7 +7,7 @@ import AboutUs from "./components/AboutUs";
 import PastEvents from "./components/PastEvents";
 import SocialIcons from "./components/SocialIcons";
 import Sponsors from "./components/Sponsors";
-import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
+// import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
 import ajcLogo from "./images/large-logo.png";
 import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
 
@@ -34,7 +34,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
 				</div>
 			</section>
 			<AboutUs />
-			<UpcomingSocialEvents />
+			{/* <UpcomingSocialEvents /> */}
 			<UpcomingCareerEvents />
 			<PastEvents />
 			<Sponsors />
