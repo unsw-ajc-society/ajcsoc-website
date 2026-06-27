@@ -6,6 +6,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
 import { routing } from "../../i18n/routing";
 import NavBar from "./(home)/components/NavBar";
+import Footer from "./(home)/components/Footer";
 
 export async function generateMetadata({
 	params,
@@ -66,6 +67,7 @@ export default async function RootLayout({
 				<NextIntlClientProvider>
 					<NavBar />
 					{children}
+					<Footer />
 				</NextIntlClientProvider>
 			</body>
 		</html>

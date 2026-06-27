@@ -33,7 +33,7 @@ export default function Sponsors() {
 				<div className="flex w-full flex-wrap justify-center gap-[15vw]">
 					{sponsors.map(({ name, href, image }) => (
 						<Link
-							className="card justify-center group w-[12%] min-w-[60px] overflow-hidden bg-base-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+							className="card justify-center group w-[12%] min-w-15 overflow-hidden bg-base-100 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl"
 							href={href}
 							key={name}
 							rel="noopener noreferrer"
