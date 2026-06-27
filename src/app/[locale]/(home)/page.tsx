@@ -9,6 +9,7 @@ import SocialIcons from "./components/SocialIcons";
 import Sponsors from "./components/Sponsors";
 import UpcomingSocialEvents from "./components/UpcomingSocialEvents";
 import ajcLogo from "./images/large-logo.png";
+import UpcomingCareerEvents from "./components/UpcomingCareerEvents";
 
 export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = use(params) as { locale: Locale };
@@ -34,6 +35,7 @@ export default function HomePage({ params }: { params: Promise<{ locale: string 
 			</section>
 			<AboutUs />
 			<UpcomingSocialEvents />
+			<UpcomingCareerEvents />
 			<PastEvents />
 			<Sponsors />
 			<section className="hero px-4 py-8">
