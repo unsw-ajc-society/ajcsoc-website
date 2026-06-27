@@ -10,12 +10,12 @@ const events = [
 		image: interviewWorkshop,
 		translationKey: "careersNetworkingEvent",
 	},
-];
+] as const;
 
 export default function UpcomingCareerEvents() {
 	const t = useTranslations("HomePage.UpcomingCareerEvents");
 
-	if (events.length === 0) {
+	if (!events.length) {
 		return (
 			<section className="w-full bg-primary px-4 py-8 text-primary-content">
 				<div className="mx-auto flex w-full flex-col items-center">
