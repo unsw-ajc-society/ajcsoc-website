@@ -1,33 +1,30 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
-import HAndHEvent from "../images/events/H&H_Event.png";
-import KPMGEvent from "../images/events/KPMG_Event.jpg";
-import MyNaviEvent from "../images/events/MyNavi_Event.jpg";
+import interviewWorkshop from "../images/events/Interview_Workshop_Event.png"
 
 const events = [
 	{
-		href: "https://docs.google.com/forms/d/e/1FAIpQLSfC_Zc8xWA-dJJYbjJJUL5sr-LtRgrAgrmsCc6A2UAVw-obng/viewform",
-		id: "hnh",
-		image: HAndHEvent,
-		translationKey: "careersNetworkingEvent",
-	},
-	{
-		href: "https://regu-20105603.hs-sites.com/kpmg-aus25",
-		id: "kpmg",
-		image: KPMGEvent,
-		translationKey: "careersNetworkingEvent",
-	},
-	{
-		href: "https://global.mynavi.jp/conts/event/aus_mcs2025jul/?utm_source=studentpartnar&utm_medium=textl&utm_campaign=2507",
-		id: "mynavi",
-		image: MyNaviEvent,
+		href: "https://docs.google.com/forms/d/e/1FAIpQLSfEYJE8ib2x74ZEb2GdMu7Qybr3L8Fws2SzZqtsKZygwmnnRg/viewform",
+		id: "interviewWks",
+		image: interviewWorkshop,
 		translationKey: "careersNetworkingEvent",
 	},
 ] as const;
 
 export default function UpcomingCareerEvents() {
 	const t = useTranslations("HomePage.UpcomingCareerEvents");
+
+	if (!events.length) {
+		return (
+			<section className="w-full bg-primary px-4 py-8 text-primary-content">
+				<div className="mx-auto flex w-full flex-col items-center">
+					<h2 className="mb-10 text-center text-2xl font-bold md:text-4xl">{t("title")}</h2>
+					<p className="text-base-content/60 text-white">No upcoming careers events yet :{'('}</p>
+				</div>
+			</section>
+		)
+	};
 
 	return (
 		<section className="w-full bg-primary px-4 py-8 text-primary-content">
