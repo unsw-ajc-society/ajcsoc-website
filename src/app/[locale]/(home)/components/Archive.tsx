@@ -11,8 +11,8 @@ const newsletters = [
 		title: "2026 Term 2 Edition 6",
 		date: "July 2026",
 		description: "This week's feature articles explore the union organisations in Japan and Australia and compare how Japan's top universities rank against Australia's leading institutions...",
-		hrefEnglish: "https://preview.mailerlite.io/emails/webview/2097742/191780861433087802",
-		hrefJapanese: "https://preview.mailerlite.io/emails/webview/2097742/191780861576742779"
+		hrefEnglish: "https://preview.mailerlite.io/emails/webview/2097742/191846159343421131",
+		hrefJapanese: "https://preview.mailerlite.io/emails/webview/2097742/191846097476388728"
 	},
 	{
 		image: "https://storage.mlcdn.com/account_image/2097742/DUHqfS8PCMNtIz0gNeynwDpi2teodTnaMXaDCzmR.png",
