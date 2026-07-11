@@ -30,7 +30,7 @@
 	"devDependencies": {
 		"@risu729/tsconfigs": "3.0.0",
 		"@tailwindcss/postcss": "4.3.2",
-		"@types/node": "25.9.4",
+		"@types/node": "25.9.5",
 		"@types/react": "19.2.17",
 		"@types/react-dom": "19.2.3",
 		"oxfmt": "0.58.0",
