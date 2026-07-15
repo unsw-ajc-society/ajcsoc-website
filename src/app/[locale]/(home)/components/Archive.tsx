@@ -1,18 +1,27 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Link } from "../../../../i18n/navigation";
-
+import InterviewWorkshop from "../images/events/interview_workshop_event.jpg";
 
 
 const newsletters = [
+	{
+		image: InterviewWorkshop,
+		title: "2026 Term 2 Edition 7",
+		date: "July 2026",
+		description: "We're thrilled to share the details on our upcoming Internship Pathway Night and our MyNavi event! We also have two new feature pieces: one exploring how Japan Airlines' First Woman CEO...",
+		hrefEnglish: "https://preview.mailerlite.io/emails/webview/2097742/193015234944828842",
+		hrefJapanese: "https://preview.mailerlite.io/emails/webview/2097742/193015234832631280"
+	},
 	{
 		image: "https://storage.mlcdn.com/account_image/2097742/QWKcYsYWQcNX9ioux0HYks2fAqhw4zNMXZ9MtB22.png",
 		title: "2026 Term 2 Edition 6",
 		date: "July 2026",
 		description: "This week's feature articles explore the union organisations in Japan and Australia and compare how Japan's top universities rank against Australia's leading institutions...",
-		hrefEnglish: "https://preview.mailerlite.io/emails/webview/2097742/191846159343421131",
-		hrefJapanese: "https://preview.mailerlite.io/emails/webview/2097742/191846097476388728"
+		hrefEnglish: "https://preview.mailerlite.io/preview/2097742/emails/192560279910877157",
+		hrefJapanese: "https://preview.mailerlite.io/preview/2097742/emails/192560263236420720"
 	},
 	{
 		image: "https://storage.mlcdn.com/account_image/2097742/DUHqfS8PCMNtIz0gNeynwDpi2teodTnaMXaDCzmR.png",
@@ -113,12 +122,22 @@ export default function Archive() {
 					key={selected.title}
 					className="card bg-base-100 w-96 shadow-sm animate-slide-up"
 				>
-					<figure>
+					{ typeof selected.image === 'string' && <figure>
 						<img
 							src={selected.image}
 							alt={`${selected.title} Cover Image`}
 						/>
-					</figure>
+					</figure>}
+					{ typeof selected.image !== 'string' && selected.image && <figure>
+						<Image
+							alt={`${selected.title} Cover Image`}
+							src={selected.image}
+						/>
+						{/* <img
+							src={selected.image}
+							alt={`${selected.title} Cover Image`}
+						/> */}
+					</figure>}
 					<div className="card-body">
 						<h2 className="card-title">{selected.title}</h2>
 						<p>{selected.description}</p>
