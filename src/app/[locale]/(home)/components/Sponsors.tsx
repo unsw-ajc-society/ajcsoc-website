@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "../../../../i18n/navigation";
+import ryuLogLogo from "../images/sponsors/RyuLog_.png";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
 import mynaviLogo from "../images/sponsors/mynavi-kokusaiha-logo.webp";
 import sushiTrainLogo from "../images/sponsors/sushi-train-logo.webp";
@@ -20,6 +21,11 @@ const sponsors = [
 		href: "https://linktr.ee/sushitrain.maroubra",
 		image: sushiTrainLogo,
 		name: "Sushi Train Maroubra"
+	},
+	{
+		href: "https://ryulog.com/",
+		image: ryuLogLogo,
+		name: "RyuLog",
 	}
 ] as const;
 
