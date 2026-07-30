@@ -36,6 +36,6 @@
 		"oxfmt": "0.60.0",
 		"oxlint": "1.75.0",
 		"tailwindcss": "4.3.3",
-		"typescript": "6.0.3"
+		"typescript": "7.0.2"
 	}
 }
