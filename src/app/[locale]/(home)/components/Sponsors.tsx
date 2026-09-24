@@ -6,6 +6,7 @@ import regulusLogo from "../images/sponsors/regulus.webp";
 import hnhLogo from "../images/sponsors/hnh-logo.png";
 import mynaviLogo from "../images/sponsors/mynavi-kokusaiha-logo.webp";
 import sushiTrainLogo from "../images/sponsors/sushi-train-logo.webp";
+import meisterLogo from "../images/sponsors/mesiter-logo.webp";
 
 const sponsors = [
 	{
@@ -32,6 +33,11 @@ const sponsors = [
 		href: "https://www.regu.jp/for_students.html",
 		image: regulusLogo,
 		name: "Regulus"
+	},
+	{
+		href: "https://careermeister.com.au/",
+		image: meisterLogo,
+		name: "Career Meister"
 	}
 ] as const;
 
