@@ -20,7 +20,7 @@
 		"cloudflare-workers-and-google-oauth": "2.0.0",
 		"daisyui": "5.7.46",
 		"esbuild": "0.28.2",
-		"next": "16.3.6",
+		"next": "16.3.7",
 		"next-intl": "4.14.7",
 		"react": "19.3.0",
 		"react-dom": "19.3.0",
