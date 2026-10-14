@@ -28,7 +28,7 @@
 		"zod": "4.6.5"
 	},
 	"devDependencies": {
-		"@risu729/tsconfigs": "3.0.0",
+		"@risu729/tsconfigs": "3.0.1",
 		"@tailwindcss/postcss": "4.3.3",
 		"@types/node": "25.9.9",
 		"@types/react": "19.3.0",
