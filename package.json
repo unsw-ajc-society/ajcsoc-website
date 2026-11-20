@@ -21,7 +21,7 @@
 		"daisyui": "5.8.1",
 		"esbuild": "0.28.2",
 		"next": "16.4.6",
-		"next-intl": "4.15.1",
+		"next-intl": "4.15.3",
 		"react": "19.3.1",
 		"react-dom": "19.3.1",
 		"react-icons": "5.7.0",
